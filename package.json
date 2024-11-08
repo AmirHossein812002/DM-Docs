@@ -1,0 +1,18 @@
+{
+  "name": "file-type-based-docs",
+  "author": "client infrastructure team",
+  "license": "MIT",
+  "devDependencies": {
+    "sass-embedded": "^1.78.0",
+    "vitepress": "^1.3.1"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "dependencies": {
+    "@vue/theme": "^2.2.12",
+    "vue": "^3.4.35"
+  }
+}

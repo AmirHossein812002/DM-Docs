@@ -1,0 +1,55 @@
+@keyframes scrollbar-fade-in {
+  0% {
+    --scroll-color: var(--vt-c-bg);
+  }
+
+  100% {
+    --scroll-color: var(--vt-c-brand);
+  }
+}
+
+@keyframes scrollbar-fade-out {
+  0% {
+    --scroll-color: var(--vt-c-bg);
+  }
+
+  100% {
+    --scroll-color: var(--vt-c-brand);
+  }
+}
+
+:root {
+  --scroll-color: var(--vt-c-bg);
+}
+
+body {
+  overflow-y: scroll;
+  animation: scrollbar-fade-out 0.6s ease-in-out forwards;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  background-color: var(--vt-c-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10000px;
+  border: 4px solid var(--vt-c-bg);
+  background-color: var(--scroll-color);
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+body:hover {
+  animation: scrollbar-fade-in 0.6s ease-in-out forwards;
+}
+
+.vt-doc .header-anchor:before {
+  content: "";
+}
+
+.VPFooter {
+  display: none !important;
+}
