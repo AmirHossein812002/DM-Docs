@@ -16,7 +16,7 @@ This analysis categorizes movies into clusters based on genre characteristics. B
 
 ### Genre Distribution Visualization
 
-![alt text](image-21.png)
+![alt text](/public/image-21.png)
 
 The bar chart above represents the genre distribution across the five clusters, visually emphasizing the dominant genres within each cluster.
 
@@ -75,7 +75,7 @@ This analysis categorizes movies by their release decade, providing insights int
 
 ### Decade Distribution Table and Visualization
 
-![alt text](image-22.png)
+![alt text](/public/image-22.png)
 
 The table and bar chart above show the number of movies released in each decade. The data reveals a clear trend of growth in movie production over time, with particularly high production rates in the 21st century.
 
@@ -135,7 +135,7 @@ This analysis categorizes movies into three clusters based on their average vote
 
 ### Score Cluster Distribution Visualization
 
-![alt text](image-23.png)
+![alt text](/public/image-23.png)
 
 The bar chart above shows the number of movies in each score cluster along with the score range for each cluster.
 
@@ -177,7 +177,7 @@ This analysis examines the relationship between a movie's budget and its popular
 
 ### Budget vs. Popularity Scatter Plot (Limited Range)
 
-![alt text](image-24.png)
+![alt text](/public/image-24.png)
 
 In the scatter plot above, budget and popularity are displayed on a log scale to enhance clarity and observe patterns in a more manageable range. The data is limited to movies within the 75th percentile for budget and the 90th percentile for popularity, excluding extreme values that could skew the visualization.
 
@@ -462,19 +462,19 @@ This approach enhances the dataset’s usability for temporal analysis by transf
 
 In the vote average distribution, the majority of films fall into the "Medium" and "High" categories, with fewer films rated as "Very Low" or "Low." This pattern suggests that the general audience feedback is moderately positive, and only a small subset of films receive notably low ratings. High ratings may be concentrated in well-received genres, sequels, or films with extensive marketing reach, which tend to attract favorable votes.
 
-![alt text](image-35.png)
+![alt text](/public/image-35.png)
 
 ### Distribution of Budget Categories
 
 The budget distribution indicates that most films are classified in the "Low Budget" category, with significantly fewer films in the "Medium," "High," or "Very High" budget categories. This skew towards lower budgets suggests that the industry is predominantly composed of lower-cost productions, likely due to the high financial risk associated with larger budgets. The "Very High Budget" films are rare and often associated with major studios and franchises aiming for large-scale returns.
 
-![alt text](image-8.png)
+![alt text](/public/image-8.png)
 
 ### Distribution of Revenue Categories
 
 The revenue distribution shows that most films generate "Low Revenue," with a notable segment under "No Revenue," which may indicate either a lack of reported earnings or financial underperformance. Only a small percentage of films achieve "High" or "Very High Revenue," generally associated with popular or blockbuster releases. This disparity highlights the competitive nature of the film industry, where only select films achieve significant box office success.
 
-![alt text](image-13.png)
+![alt text](/public/image-13.png)
 
 ---
 
@@ -493,6 +493,6 @@ In the "overview" column, we applied several preprocessing steps to enhance the 
 
 The table below displays a comparison of the original overviews with their processed counterparts after applying the preprocessing steps. The processed text is more concise, containing key terms that encapsulate the essence of each movie description without unnecessary words.
 
-![alt text](image-40.png)
+![alt text](/public/image-40.png)
 
 The processed overview text is now optimized for tasks such as text analysis, clustering, and sentiment analysis, making it easier to analyze patterns and themes across movies.

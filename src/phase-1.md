@@ -14,7 +14,7 @@ In this step, we calculated various statistical attributes for the following num
 
 Here is a table that summarizes the statistics for each numerical column:
 
-![alt text](image-6.png)
+![alt text](/public/image-6.png)
 
 ## Boxplots
 
@@ -22,37 +22,37 @@ Here is a table that summarizes the statistics for each numerical column:
 
    - The boxplot for `vote_average` suggests a reasonable distribution of values, with a clear median and few outliers. This indicates that most movies have an average rating within a certain range, reflecting more accurate scoring among films.
 
-   ![alt text](image.png)
+   ![alt text](/public/image.png)
 
 2. **Vote Count:**
 
    - The `vote_count` boxplot shows a significant number of outliers. Most of the values cluster at the lower end, while a few films have an exceptionally high number of votes. This suggests that a small number of films receive a disproportionate amount of attention, potentially skewing overall analysis.
 
-   ![alt text](image-1.png)
+   ![alt text](/public/image-1.png)
 
 3. **Runtime:**
 
    - Similar to `vote_count`, the `runtime` boxplot indicates many outliers with the majority of films clustered at lower runtimes. This raises concerns about the accuracy of the runtime data, as the presence of extreme values might suggest inconsistencies in how runtime is reported.
 
-   ![alt text](image-2.png)
+   ![alt text](/public/image-2.png)
 
 4. **Revenue:**
 
    - The `revenue` boxplot displays a vast range of values, with numerous outliers. Most films have low revenue, while a few blockbusters inflate the average. This discrepancy highlights the potential inaccuracies in revenue reporting, particularly for smaller films.
 
-   ![alt text](image-3.png)
+   ![alt text](/public/image-3.png)
 
 5. **Budget:**
 
    - The budget boxplot reveals many outliers as well, with most films showing low budgets and a few with exceedingly high budgets. This disparity may indicate that many films operate on very tight budgets, while a handful of major productions skew the overall analysis.
 
-   ![alt text](image-4.png)
+   ![alt text](/public/image-4.png)
 
 6. **Popularity:**
 
    - The `popularity` boxplot shows a similar trend to revenue and budget, with many films having low popularity scores and several outliers. This could suggest that the data may not accurately reflect the popularity of films outside of a few well-known titles.
 
-   ![alt text](image-5.png)
+   ![alt text](/public/image-5.png)
 
 ### Conclusion
 
@@ -62,7 +62,7 @@ In summary, while the `vote_average` appears to provide a more reliable dataset,
 
 The scatter plot below shows the relationship between films' `budget` and `revenue`:
 
-![alt text](image-7.png)
+![alt text](/public/image-7.png)
 
 The scatter plot reveals several important insights:
 
@@ -84,7 +84,7 @@ In light of the scatter plot's findings, it is clear that while a larger budget 
 
 The histogram below shows the distribution of `vote_average` for movies:
 
-![alt text](image-9.png)
+![alt text](/public/image-9.png)
 
 ### Analysis
 
@@ -107,7 +107,7 @@ In summary, while the histogram provides a view of `vote_average` distribution, 
 
 The scatter plot below shows the relationship between the number of votes a movie received (`vote_count`) and its average rating (`vote_average`):
 
-![alt text](image-10.png)
+![alt text](/public/image-10.png)
 
 ### Analysis
 
@@ -127,7 +127,7 @@ Overall, the scatter plot suggests that movies with higher vote counts tend to r
 
 The line chart below shows the number of animation films released each year:
 
-![alt text](image-11.png)
+![alt text](/public/image-11.png)
 
 ### Analysis
 
@@ -154,12 +154,12 @@ The tables below show the aggregated statistics for each genre:
 1. **Sorted by Vote Average**:
    Genres are sorted by their average audience rating to identify which types of films have been most positively rated by viewers.
 
-   ![alt text](image-12.png)
+   ![alt text](/public/image-12.png)
 
 2. **Sorted by Revenue**:
    Genres are sorted by their average revenue to highlight which genres tend to generate the highest earnings.
 
-   ![alt text](image-15.png)
+   ![alt text](/public/image-15.png)
 
 ### Key Findings
 
@@ -184,7 +184,7 @@ This genre-based insight can help guide future film production and marketing str
 
 The table below shows production companies that have produced the most "high-rated" films (defined as films with a `vote_average` of 7 or higher). It also includes average metrics for popularity, vote average, and revenue for these high-rated films.
 
-![alt text](image-16.png)
+![alt text](/public/image-16.png)
 
 ### Key Findings
 
@@ -208,7 +208,7 @@ This analysis shows that certain production companies are known for consistently
 
 This analysis compares adult movies (films marked as intended for adult audiences) with non-adult movies across three key metrics: average rating (`vote_average`), average revenue, and average popularity.
 
-![alt text](image-17.png)
+![alt text](/public/image-17.png)
 
 ### Key Findings
 
@@ -231,7 +231,7 @@ The data suggests that non-adult movies perform better across all measured metri
 
 This analysis calculates the revenue-to-budget ratio for each film, providing insight into which films were the most financially successful relative to their budgets. A higher ratio indicates a greater return on investment.
 
-![alt text](image-18.png)
+![alt text](/public/image-18.png)
 
 ### Key Findings
 
@@ -256,7 +256,7 @@ The revenue-to-budget ratio provides a valuable metric for evaluating financial 
 
 This analysis categorizes movies based on the spoken languages used, identifying which languages are most frequently featured in films.
 
-![alt text](image-19.png)
+![alt text](/public/image-19.png)
 
 ### Key Findings
 
