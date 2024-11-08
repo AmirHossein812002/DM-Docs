@@ -2,83 +2,67 @@
 
 ## Numerical Columns
 
-In this step, we calculated various statistical attributes for the following numerical columns: `vote_average`, `vote_count`, `runtime`, `revenue`, `budget`, and `popularity`. The attributes calculated include:
+We analyzed key statistics for the numerical columns: `vote_average`, `vote_count`, `runtime`, `revenue`, `budget`, and `popularity`. The attributes we looked at include:
 
-- **Type:** The data type of the column.
-- **Range:** The minimum and maximum values present in the column.
-- **Min:** The minimum value of the column.
-- **Max:** The maximum value of the column.
-- **Mean:** The average value of the column.
-- **Mode:** The most frequently occurring value in the column.
-- **Median:** The middle value when the data is sorted.
+- **Type:** Data type of the column.
+- **Range:** Spread of values from min to max.
+- **Min/Max:** Smallest and largest values.
+- **Mean:** Average value.
+- **Mode:** Most common value.
+- **Median:** Middle value in sorted data.
 
-Here is a table that summarizes the statistics for each numerical column:
+Below is a table with the statistics for each column:
 
 ![alt text](/public/image-6.png)
 
 ## Boxplots
 
 1. **Vote Average:**
-
-   - The boxplot for `vote_average` suggests a reasonable distribution of values, with a clear median and few outliers. This indicates that most movies have an average rating within a certain range, reflecting more accurate scoring among films.
-
-   ![alt text](/public/image.png)
+   - The boxplot for `vote_average` shows a balanced distribution with few outliers. Most films fall within a consistent rating range, indicating reliable scoring data.
+   - ![alt text](/public/image.png)
 
 2. **Vote Count:**
-
-   - The `vote_count` boxplot shows a significant number of outliers. Most of the values cluster at the lower end, while a few films have an exceptionally high number of votes. This suggests that a small number of films receive a disproportionate amount of attention, potentially skewing overall analysis.
-
-   ![alt text](/public/image-1.png)
+   - `Vote_count` has many outliers, with most values clustered low and a few films with very high votes. This suggests that a handful of popular films skew the vote distribution.
+   - ![alt text](/public/image-1.png)
 
 3. **Runtime:**
-
-   - Similar to `vote_count`, the `runtime` boxplot indicates many outliers with the majority of films clustered at lower runtimes. This raises concerns about the accuracy of the runtime data, as the presence of extreme values might suggest inconsistencies in how runtime is reported.
-
-   ![alt text](/public/image-2.png)
+   - The `runtime` boxplot also shows numerous outliers, with most films clustered around lower runtimes. This may indicate variability in runtime data accuracy.
+   - ![alt text](/public/image-2.png)
 
 4. **Revenue:**
-
-   - The `revenue` boxplot displays a vast range of values, with numerous outliers. Most films have low revenue, while a few blockbusters inflate the average. This discrepancy highlights the potential inaccuracies in revenue reporting, particularly for smaller films.
-
-   ![alt text](/public/image-3.png)
+   - The `revenue` boxplot displays a wide range with multiple outliers. Most films have low revenue, but a few blockbusters inflate the average, showing possible reporting inconsistencies.
+   - ![alt text](/public/image-3.png)
 
 5. **Budget:**
-
-   - The budget boxplot reveals many outliers as well, with most films showing low budgets and a few with exceedingly high budgets. This disparity may indicate that many films operate on very tight budgets, while a handful of major productions skew the overall analysis.
-
-   ![alt text](/public/image-4.png)
+   - The `budget` boxplot reveals outliers as well, with most films on low budgets and a few major productions with high budgets. This may affect overall budget analysis.
+   - ![alt text](/public/image-4.png)
 
 6. **Popularity:**
-
-   - The `popularity` boxplot shows a similar trend to revenue and budget, with many films having low popularity scores and several outliers. This could suggest that the data may not accurately reflect the popularity of films outside of a few well-known titles.
-
-   ![alt text](/public/image-5.png)
+   - `Popularity` follows a similar pattern with low scores and some outliers. This suggests that the popularity metric might not represent smaller films well.
+   - ![alt text](/public/image-5.png)
 
 ### Conclusion
 
-In summary, while the `vote_average` appears to provide a more reliable dataset, the other numerical columns—particularly `vote_count`, `runtime`, `revenue`, `budget`, and `popularity`—show a concerning number of outliers and skewed distributions. These results indicate that the data might not be entirely accurate and warrants further investigation and cleaning before drawing any significant conclusions.
+Overall, while `vote_average` is more consistent, other numerical columns like `vote_count`, `runtime`, `revenue`, `budget`, and `popularity` have significant outliers and skewed distributions. This indicates potential data quality issues that should be addressed for reliable analysis.
+
 
 ## Revenue and Budget Relationship
 
-The scatter plot below shows the relationship between films' `budget` and `revenue`:
+The scatter plot below shows the relationship between `budget` and `revenue`:
 
 ![alt text](/public/image-7.png)
 
-The scatter plot reveals several important insights:
+1. **General Trend**: Higher budgets often lead to higher revenues, suggesting that bigger budgets can help films perform better financially.
 
-1. **Positive Correlation**: There appears to be a general positive trend, indicating that higher budgets are often associated with higher revenues. This suggests that films with larger production budgets tend to perform better financially, likely due to increased marketing, higher production values, and the ability to attract star talent.
+2. **Variability**: Not all high-budget films succeed, and some films with lower budgets still earn high revenue, showing that budget isn’t everything.
 
-2. **Variability in Revenue**: Despite the observable trend, there is significant variability in revenue for films with similar budgets. This indicates that budget alone is not a definitive predictor of revenue. Many films with moderate budgets achieve high revenues, while some high-budget films fail to perform well at the box office.
+3. **Outliers**: A few blockbuster films stand out with very high revenue, likely due to factors like strong fanbases and marketing.
 
-3. **Outliers**: The chart shows several outliers, particularly in the upper right quadrant, where films with exceptionally high revenues exist. These outliers could represent blockbuster hits or franchises that benefit from established fanbases, marketing strategies, or critical acclaim that drive ticket sales beyond typical expectations.
+4. **Conclusion**: While a bigger budget can increase a film’s chances of success, many other factors also play a role, like timing, genre, and audience interest.
 
-4. **Cautions Against Assumptions**: While the scatter plot indicates a trend, it is crucial to approach the conclusion cautiously. The presence of many films that do not conform to the trend underscores the complexity of the film industry, where factors such as genre, timing of release, critical reception, and audience demand also play crucial roles in a film's financial success.
+### Summary
 
-5. **Conclusion**: In summary, while there is a noticeable relationship suggesting that increased budgets can lead to increased revenues, this relationship is not strict. Many factors influence a film's performance, and relying solely on budget as a predictor of revenue would overlook the multifaceted nature of the film market.
-
-### Enhanced Analysis
-
-In light of the scatter plot's findings, it is clear that while a larger budget often provides the resources necessary for successful films, it does not guarantee profitability. The film industry remains unpredictable, and many external variables can significantly impact a film's box office performance. This reinforces the need for filmmakers and studios to consider comprehensive strategies that encompass not just budget allocation, but also marketing, storytelling, and audience engagement to maximize their potential for success.
+Higher budgets help, but success depends on more than just money. Filmmakers should consider factors beyond budget, like marketing and audience engagement.
 
 ## Vote Average Distribution
 
@@ -88,40 +72,40 @@ The histogram below shows the distribution of `vote_average` for movies:
 
 ### Analysis
 
-1. **Skewed Distribution**: The distribution is highly skewed towards lower ratings, with a significant number of movies having a `vote_average` close to zero. This might suggest that a large portion of the dataset includes movies with minimal votes or low ratings.
+1. **Skewed Towards Lower Ratings**: Many movies have a low `vote_average`, suggesting that a large part of the dataset includes films with minimal votes or lower ratings.
 
-2. **Moderate to High Ratings**: For movies that have been rated more significantly, the average rating seems to cluster around the mid-range (approximately 5-7), which could indicate that movies with more substantial viewership or interest tend to achieve more moderate ratings rather than extreme high or low scores.
+2. **Mid-Range Cluster**: Movies with more ratings tend to have `vote_average` clustered between 5 and 7, showing a trend towards moderate ratings rather than extremes.
 
-### Suggested Next Step for Analysis
+### Next Steps
 
-To determine if movies with a higher `vote_count` tend to have higher `vote_average`:
+To explore if movies with more votes generally have higher ratings:
+- **Correlation Check**: Calculate the correlation between `vote_count` and `vote_average`.
+- **Scatter Plot**: Use a scatter plot to visually inspect if movies with higher `vote_count` tend to have higher `vote_average`.
 
-- **Comparison Using Correlation**: Calculate the correlation between `vote_count` and `vote_average` to quantify any relationship.
-- **Grouped Histograms or Scatter Plot**: Plot `vote_count` against `vote_average` in a scatter plot or use grouped histograms to see if higher vote counts correlate with higher average ratings.
+### Summary
 
-### Enhanced Analysis
+The histogram shows a skewed distribution in `vote_average`. Further analysis, especially focusing on `vote_count`, could reveal whether more popular movies tend to be better rated.
 
-In summary, while the histogram provides a view of `vote_average` distribution, further analysis with a scatter plot or grouped data for `vote_count` would provide more insights. If the next analysis indicates a positive correlation, it would suggest that movies with higher engagement tend to be better received by audiences.
 
 ## Vote Count vs Vote Average
 
-The scatter plot below shows the relationship between the number of votes a movie received (`vote_count`) and its average rating (`vote_average`):
+The scatter plot below shows the relationship between the number of votes (`vote_count`) and average rating (`vote_average`) of movies:
 
 ![alt text](/public/image-10.png)
 
 ### Analysis
 
-1. **Concentration of Low Vote Counts**: The majority of movies have low `vote_count` values (close to zero), which likely includes films with limited viewership or niche audiences. These movies show a wide range of `vote_average` values, indicating that movies with low vote counts can vary widely in terms of ratings.
+1. **Low Vote Counts**: Most movies have low `vote_count`, and their ratings (`vote_average`) vary widely, showing that niche or less-viewed films can receive any rating.
 
-2. **Stabilization with Higher Vote Counts**: As `vote_count` increases, the `vote_average` tends to stabilize around a range between 6 and 8. This pattern suggests that movies with more votes tend to have ratings that converge towards a central value, likely due to the "law of large numbers" where more ratings lead to a more reliable average.
+2. **Stabilization with More Votes**: For movies with higher `vote_count`, `vote_average` tends to settle around 6-8, suggesting that more ratings bring consistency.
 
-3. **Absence of Extreme Ratings in High Vote Counts**: Movies with very high vote counts rarely receive extremely low or high ratings. Instead, they typically cluster in the mid-range, which may indicate that popular movies with wide appeal tend to receive moderate to high ratings.
+3. **Moderate Ratings for Popular Movies**: Highly-rated movies with many votes generally avoid extreme ratings, often clustering around mid to high scores.
 
-4. **Potential Positive Correlation**: While not strongly linear, there is a slight trend where movies with higher vote counts tend to have higher `vote_average` values. However, this relationship is not strict, as numerous factors (such as genre, marketing, and critical reception) can influence both the number of votes and the rating.
+4. **Slight Positive Trend**: There’s a mild trend where movies with more votes have higher ratings, though it’s not strong. Other factors likely influence both vote count and rating.
 
-### Conclusion
+### Summary
 
-Overall, the scatter plot suggests that movies with higher vote counts tend to receive more stable and generally higher average ratings. However, the trend is not definitive, and exceptions are present. High vote counts might indicate a more widely viewed or popular movie, often accompanied by a moderately positive audience reception.
+Movies with more votes usually have more stable and moderately positive ratings. This trend suggests that popular movies tend to have broad appeal but avoids extreme ratings.
 
 ## Animation Film Release Dates
 
@@ -131,149 +115,138 @@ The line chart below shows the number of animation films released each year:
 
 ### Analysis
 
-1. **Gradual Growth Until the 1990s**: From the late 1800s to the early 1990s, there was a relatively low and steady rate of animation film releases. This slow growth reflects the early stages of the animation industry, which was limited by technological constraints and high production costs.
+1. **Slow Growth Until the 1990s**: Animation film releases grew slowly from the 1800s to the early 1990s, reflecting early industry limitations and high production costs.
 
-2. **Significant Increase in the 2000s**: Starting in the late 1990s and accelerating through the 2000s, there is a noticeable increase in the number of animation films released annually. This surge aligns with advancements in computer graphics, which made animation more accessible and opened new possibilities for studios.
+2. **Increase in the 2000s**: Starting in the late 1990s, there’s a clear rise in releases, likely due to advancements in computer animation making production easier and cheaper.
 
-3. **Peak in Recent Years**: The chart shows a sharp peak in the 2010s, with the highest number of releases around 2018-2019. This period corresponds with the widespread adoption of digital animation technologies and a growing global demand for animated content across various media platforms, including streaming services.
+3. **Peak in 2010s**: The number of releases peaks around 2018-2019, as digital animation technologies became widespread and demand for animated content grew across platforms like streaming services.
 
-4. **Decline Towards 2020**: The sudden drop after 2019 could reflect incomplete data for the most recent years in the dataset, or it could be due to factors like the COVID-19 pandemic impacting film production and release schedules.
+4. **Recent Decline**: The drop after 2019 could be due to incomplete data or disruptions like the COVID-19 pandemic affecting release schedules.
 
 ### Conclusion
 
-Overall, the chart demonstrates how technological advancements and market demand have driven significant growth in the animation industry, especially in recent decades. The data highlights how animation has become a major part of the entertainment industry, with increasing production volume over time. Further analysis could look into specific events or technological milestones that contributed to the growth patterns observed in the chart.
+This chart shows how technology and demand have driven the growth of animation, especially since the 2000s. Animation has become a key part of the entertainment industry, with production volumes increasing significantly over time.
+
 
 ## Popular Film Genres
 
-This analysis uses the `genres` column to identify popular genres by examining the number of films in each genre and assessing which genres have the highest average ratings (`vote_average`) and the highest average revenue (`revenue`). This helps to determine which genres have been most well-received by audiences.
+This analysis uses the `genres` column to identify popular genres based on the number of films, average ratings (`vote_average`), and average revenue (`revenue`). This helps determine which genres are most successful with audiences.
 
 ### Genre Statistics
 
-The tables below show the aggregated statistics for each genre:
+The tables below display the top genres based on average ratings and revenue:
 
 1. **Sorted by Vote Average**:
-   Genres are sorted by their average audience rating to identify which types of films have been most positively rated by viewers.
+   Shows the genres with the highest average audience ratings.
 
    ![alt text](/public/image-12.png)
 
 2. **Sorted by Revenue**:
-   Genres are sorted by their average revenue to highlight which genres tend to generate the highest earnings.
+   Shows the genres that generate the highest average revenue.
 
    ![alt text](/public/image-15.png)
 
 ### Key Findings
 
-1. **Top Genres by Audience Rating**:
-
-   - **Action** and **TV Movie** genres lead in terms of average ratings, suggesting that these genres are generally well-received by audiences.
-   - Other high-ranking genres in terms of ratings include **Mystery**, **Adventure**, and **Crime**.
-   - **Animation** has a relatively lower average rating, indicating that despite its popularity, it may not always achieve the highest ratings from viewers.
+1. **Top Genres by Rating**:
+   - **Action** and **TV Movie** genres have high average ratings, suggesting they are well-received by audiences.
+   - Other high-rated genres include **Mystery**, **Adventure**, and **Crime**.
+   - **Animation** has a lower average rating, showing that while it’s popular, it may not always achieve top ratings.
 
 2. **Top Genres by Revenue**:
-   - **Adventure** has the highest average revenue, suggesting that films in this genre tend to attract larger audiences and generate significant box office earnings.
-   - **Family** and **Fantasy** also show strong revenue performance, indicating their widespread appeal, especially for family-friendly content.
-   - **Animation** is notable for having a high number of releases but relatively lower revenue on average, which may reflect the broad range of animated content with varying production budgets and market performance.
+   - **Adventure** generates the highest average revenue, indicating strong box office appeal.
+   - **Family** and **Fantasy** also perform well financially, especially with family audiences.
+   - **Animation** has many releases but lower average revenue, possibly due to the wide range of animated films with varying budgets.
 
 ### Conclusion
 
-The analysis reveals that **Action** and **Adventure** are particularly successful genres, either in terms of audience ratings or revenue. While **Animation** is popular in terms of the number of films produced, it does not perform as strongly in terms of revenue or average ratings. This suggests that while animated films have wide appeal, they vary greatly in audience reception and box office performance.
+Overall, **Action** and **Adventure** are the most successful genres, either in ratings or revenue. **Animation**, while widely produced, varies more in audience reception and revenue. These insights can guide production and marketing strategies by identifying genres that consistently perform well.
 
-This genre-based insight can help guide future film production and marketing strategies by highlighting which genres consistently perform well both critically and financially.
+## High-Rated Films by Companies
 
-## High-Rated Films By Companies
-
-The table below shows production companies that have produced the most "high-rated" films (defined as films with a `vote_average` of 7 or higher). It also includes average metrics for popularity, vote average, and revenue for these high-rated films.
+The table below shows production companies that have produced the most high-rated films (defined as films with a `vote_average` of 7 or higher). It also includes average metrics for popularity, vote average, and revenue for these films.
 
 ![alt text](/public/image-16.png)
 
 ### Key Findings
 
 1. **Top Producers of High-Rated Movies**:
+   - **Soyuzmultfilm**, **Walter Lantz Productions**, and **Toei Animation** rank among the highest for producing high-rated films, indicating these companies consistently create content that resonates well with audiences.
 
-   - **Soyuzmultfilm**, **Walter Lantz Productions**, and **Toei Animation** are among the companies with the highest count of high-rated films. This indicates these companies have consistently produced films that resonate well with audiences in terms of quality.
+2. **Popularity and Revenue**:
+   - Companies like **Toei Animation** and **Warner Bros. Animation** not only produce high-rated films but also achieve higher popularity and revenue, suggesting they may have broader appeal or better distribution.
+   - In contrast, companies like **Walter Lantz Productions** produce high-rated films with lower popularity and revenue, possibly indicating a more niche appeal or limited distribution reach.
 
-2. **Popularity and Revenue Analysis**:
-
-   - Companies like **Toei Animation** and **Warner Bros. Animation** not only produce high-rated movies but also achieve higher popularity and revenue averages, suggesting they may have broader appeal or larger distribution networks.
-   - Some companies, like **Walter Lantz Productions**, produce high-rated films but have relatively lower average popularity and revenue, possibly reflecting niche appeal or limited distribution.
-
-3. **Overall Success of High-Rated Films**:
-   - While high ratings indicate quality, popularity and revenue metrics vary significantly among companies. This suggests that while some companies consistently produce well-received films, their financial success and popularity can depend on other factors like marketing, target audience, and distribution.
+3. **Success Beyond Ratings**:
+   - High ratings don’t always mean high revenue or popularity. Some companies produce quality films that aren’t as financially successful, showing the importance of marketing and distribution in addition to production quality.
 
 ### Conclusion
 
-This analysis shows that certain production companies are known for consistently producing high-rated films. However, financial success and popularity are not guaranteed by high ratings alone. This insight highlights the importance of comprehensive strategies for both production quality and market appeal to maximize a film's success.
+Certain companies are known for consistently producing high-rated films, but financial success and popularity vary. This highlights the need for a balanced strategy in both quality production and audience engagement to maximize a film’s success.
 
 ## Adult vs. Non-Adult Movies
 
-This analysis compares adult movies (films marked as intended for adult audiences) with non-adult movies across three key metrics: average rating (`vote_average`), average revenue, and average popularity.
+This analysis compares adult movies (films intended for adult audiences) with non-adult movies across three metrics: average rating (`vote_average`), average revenue, and average popularity.
 
 ![alt text](/public/image-17.png)
 
 ### Key Findings
 
-1. **Average Rating (vote_average)**:
-
-   - **Non-Adult Movies** have a higher average rating (2.60) compared to **Adult Movies** (1.87). This indicates that non-adult movies tend to receive better ratings from audiences.
+1. **Average Rating**:
+   - **Non-Adult Movies** have a higher average rating (2.60) than **Adult Movies** (1.87), showing that audiences tend to rate non-adult films more favorably.
 
 2. **Revenue**:
-
-   - **Non-Adult Movies** also generate significantly more revenue on average (1.87 million) compared to **Adult Movies** (5.83). The stark difference suggests that non-adult movies have broader commercial appeal and better box office performance.
+   - **Non-Adult Movies** generate much higher average revenue (1.87 million) compared to **Adult Movies** (5.83). This suggests that non-adult movies have wider commercial appeal.
 
 3. **Popularity**:
-   - **Non-Adult Movies** have a slightly higher average popularity (1.89) compared to **Adult Movies** (1.43). This indicates that non-adult movies generally attract more attention and audience interest.
+   - **Non-Adult Movies** have a slightly higher popularity score (1.89) compared to **Adult Movies** (1.43), indicating that they attract more audience interest overall.
 
 ### Conclusion
 
-The data suggests that non-adult movies perform better across all measured metrics: they receive higher ratings, generate more revenue, and are more popular. This could be due to the broader appeal and accessibility of non-adult films to a wider audience, while adult movies may cater to a more niche market with limited distribution.
+Non-adult movies outperform adult movies in ratings, revenue, and popularity. This likely reflects the broader accessibility and appeal of non-adult films, while adult films may target a more limited audience.
 
 ## Revenue-to-Budget Ratio
 
-This analysis calculates the revenue-to-budget ratio for each film, providing insight into which films were the most financially successful relative to their budgets. A higher ratio indicates a greater return on investment.
+This analysis calculates the revenue-to-budget ratio for each film, showing which films achieved the highest financial return relative to their production costs. A higher ratio indicates greater profitability.
 
 ![alt text](/public/image-18.png)
 
 ### Key Findings
 
 1. **Top Financially Successful Films**:
-
-   - **Bambi** achieved the highest revenue-to-budget ratio at approximately 311, making it one of the most financially successful films relative to its production costs.
-   - Other classics such as **10+2: The Great Secret**, **Dragon Ball Super: Broly**, **Snow White and the Seven Dwarfs**, and **Cinderella** also show high revenue-to-budget ratios, suggesting that well-established franchises or enduring stories often yield substantial returns.
+   - **Bambi** has the highest revenue-to-budget ratio (around 311), making it one of the most profitable films relative to its budget.
+   - Other classics like **10+2: The Great Secret**, **Dragon Ball Super: Broly**, **Snow White and the Seven Dwarfs**, and **Cinderella** also show high ratios, indicating that well-loved stories and franchises often yield substantial returns.
 
 2. **Low Financial Success**:
+   - Films like **Foodfight!** and other lesser-known titles have low revenue-to-budget ratios, reflecting poor financial performance. These films may have faced issues like limited audience interest or distribution.
 
-   - Films like **Foodfight!** and various lesser-known titles at the bottom of the list have extremely low revenue-to-budget ratios, indicating poor financial performance. Such films may have faced challenges in attracting audiences or suffered from limited distribution.
-
-3. **Insights on Financial Success**:
-   - Films with high revenue-to-budget ratios often include animated classics and popular franchises, which benefit from long-lasting appeal, family-friendly content, and widespread distribution.
-   - Low-performing films may reflect niche appeal, limited marketing, or production issues, underscoring the risks involved in film production.
+3. **Patterns in Financial Success**:
+   - High ratios are common among animated classics and popular franchises, which benefit from lasting appeal, family-friendly themes, and wide distribution.
+   - Low ratios may indicate niche appeal, production challenges, or limited marketing, highlighting the risks of film production.
 
 ### Conclusion
 
-The revenue-to-budget ratio provides a valuable metric for evaluating financial success. Iconic films and well-known franchises tend to outperform other films in terms of return on investment, highlighting the potential profitability of investing in established stories and universally appealing content.
+The revenue-to-budget ratio is a helpful metric for assessing financial success. Iconic films and established franchises tend to outperform in terms of return on investment, showing the value of investing in familiar, widely appealing content.
 
 ## Spoken Languages in Movies
 
-This analysis categorizes movies based on the spoken languages used, identifying which languages are most frequently featured in films.
+This analysis categorizes movies by the languages spoken, highlighting which languages are most frequently featured in films.
 
 ![alt text](/public/image-19.png)
 
 ### Key Findings
 
 1. **Most Common Languages**:
+   - **English** is the most common language, appearing in 13,415 films, reflecting its global dominance in cinema.
+   - **No Language** is the second-highest, with 6,259 films, likely including silent, animated, or experimental films.
+   - **Japanese**, **French**, and **Russian** also appear frequently, showing their influence in global cinema.
 
-   - **English** is the most commonly spoken language in movies, with a count of 13,415 films, reflecting the dominance of English-language content in the global film industry.
-   - **No Language** appears as the second-highest category, with 6,259 films, likely including silent films, animation with minimal dialogue, or experimental films without spoken language.
-   - **Japanese**, **French**, and **Russian** are also prevalent, showing the influence of these languages in global cinema.
+2. **Rare Languages**:
+   - Some languages, like **Ossetian; Ossetic**, **Occitan**, **Navajo**, and **Abkhazian**, appear in only one film, showing their rarity in mainstream movies.
 
-2. **Less Common Languages**:
-
-   - Some languages, such as **Ossetian; Ossetic**, **Occitan**, **Norwegian Bokmål**, **Navajo**, and **Abkhazian**, are represented by only a single film, indicating their rarity in mainstream cinema.
-
-3. **Insights on Language Diversity**:
-   - The variety of languages demonstrates the diversity in film production across different cultures, although English remains the dominant language.
-   - The presence of lesser-known languages highlights efforts by filmmakers to explore and represent diverse linguistic and cultural backgrounds.
+3. **Language Diversity**:
+   - While English dominates, the presence of various other languages reflects cultural diversity and a push towards inclusivity in storytelling.
 
 ### Conclusion
 
-The analysis shows that while English dominates the film industry, a wide array of languages are also represented. This linguistic diversity reflects the multicultural nature of cinema and the growing trend towards inclusivity in global storytelling.
+Though English leads globally, films in other languages contribute to the richness and diversity of cinema, showcasing a range of cultural and linguistic backgrounds.
