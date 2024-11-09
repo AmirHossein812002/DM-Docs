@@ -2,7 +2,7 @@
 
 ## Genre-Based Clustering
 
-This analysis categorizes movies into clusters based on genre characteristics. By applying KMeans clustering on the genre data, movies with similar themes and genres are grouped together, allowing for insights into common genre patterns within the dataset.
+This analysis groups movies into clusters based on genre characteristics using KMeans clustering. Each cluster represents movies with similar themes, allowing insights into common genre patterns.
 
 ### Clustered Genre Distributions Table
 
@@ -18,66 +18,57 @@ This analysis categorizes movies into clusters based on genre characteristics. B
 
 ![alt text](/public/image-21.png)
 
-The bar chart above represents the genre distribution across the five clusters, visually emphasizing the dominant genres within each cluster.
+The bar chart represents genre distribution across clusters, highlighting dominant genres within each group.
 
-### Full Analysis of Clusters
+### Cluster Analysis
 
 1. **Cluster 0**:
-
-   - **Table Insights**: This cluster has high counts in `Animation` and `Family`, indicating a focus on family-oriented animated films. Other notable genres include `Fantasy`, `Comedy`, and `Adventure`.
-   - **Visualization Insights**: The bar for Cluster 0 highlights the dominance of `Family` and `Animation`, confirming its orientation towards family-friendly and animated content.
-   - **Summary**: This cluster likely consists of family-oriented animated movies with broad appeal, possibly including well-known animated series and children’s movies.
+   - **Focus**: Family and animation, with high counts in `Family` and `Animation`.
+   - **Summary**: Likely contains family-friendly and animated films, appealing to a broad audience.
 
 2. **Cluster 1**:
-
-   - **Table Insights**: Cluster 1 has a strong representation in `Action`, `Science Fiction`, and `Adventure`, suggesting a focus on high-energy, action-oriented content.
-   - **Visualization Insights**: The large sections in `Action`, `Science Fiction`, and `Adventure` in the visualization show that this cluster is predominantly action and sci-fi based, appealing to audiences seeking thrill and excitement.
-   - **Summary**: This cluster probably includes superhero films, sci-fi adventures, and action thrillers, appealing to fans of dynamic, adventurous movies.
+   - **Focus**: Action, sci-fi, and adventure.
+   - **Summary**: Likely includes superhero films, sci-fi adventures, and action thrillers for fans of dynamic movies.
 
 3. **Cluster 2**:
-
-   - **Table Insights**: Cluster 2 displays a unique genre composition with high counts in `Horror`, `Music`, and `Animation`, indicating a mix of niche horror, musical, and animated films.
-   - **Visualization Insights**: The visual representation confirms the diversity in this cluster, with significant portions in `Horror`, `Music`, and `Animation`. This cluster stands out for its focus on more specialized genres.
-   - **Summary**: Cluster 2 may contain animated horror films, musicals, and unique fantasy genres, targeting audiences interested in unconventional or niche content.
+   - **Focus**: Horror, music, and unique animated content.
+   - **Summary**: Likely consists of niche genres, including horror and musicals, catering to specific tastes.
 
 4. **Cluster 3**:
-
-   - **Table Insights**: Cluster 3 features high counts in `Adventure`, `Action`, and `Comedy`, creating a balanced genre profile that appeals to a broad audience.
-   - **Visualization Insights**: The visual shows a substantial presence of `Adventure` and `Action`, supported by `Comedy`. This cluster includes mainstream, high-adventure movies with a mix of humor.
-   - **Summary**: Likely to include blockbuster action-comedies and adventure films, Cluster 3 caters to general audiences seeking entertaining and accessible movies.
+   - **Focus**: Adventure, action, and comedy.
+   - **Summary**: Mainstream movies with a mix of action and humor, likely popular blockbusters.
 
 5. **Cluster 4**:
-   - **Table Insights**: Dominated by `Drama`, with moderate representation in `Family`, `Fantasy`, and `History`, Cluster 4 is focused on more serious, mature genres.
-   - **Visualization Insights**: The visualization highlights the dominance of `Drama`, indicating that this cluster is centered around dramatic and potentially historical content.
-   - **Summary**: This cluster is likely to feature biographical, historical dramas, and mature family stories, catering to audiences with a taste for serious, thought-provoking films.
+   - **Focus**: Drama and history.
+   - **Summary**: Likely includes serious dramas and historical films, appealing to mature audiences.
 
 ### Recommendations
 
-- **Content Categorization**: Use clusters to better categorize movies in recommendation systems or streaming platforms. For instance, Cluster 0 (Family & Animation) and Cluster 1 (Action & Sci-Fi) can be used to provide specific genre-based recommendations.
-- **Targeted Marketing**: Clusters like Cluster 1 and Cluster 3 appeal to action and adventure audiences, while Cluster 4 can be marketed towards viewers interested in dramas or historical content.
-- **Further Refinement**: For a deeper understanding of movie characteristics, consider incorporating additional features such as movie runtime, popularity, and ratings.
+- **Content Categorization**: Use clusters for better genre-based recommendations, e.g., Cluster 0 for family films, Cluster 1 for action/sci-fi.
+- **Targeted Marketing**: Market Cluster 1 and 3 to action/adventure audiences, and Cluster 4 to drama/history viewers.
+- **Further Refinement**: Consider adding movie runtime, popularity, and ratings to enhance clustering insights.
 
-### Visual Summary
+### Summary
 
-The combination of the table and bar chart effectively highlights the distinctions between clusters:
+The table and chart illustrate the distinct focus of each cluster:
 
-- **Cluster 0** is focused on family and animated genres.
-- **Cluster 1** caters to action and sci-fi fans.
-- **Cluster 2** has a unique mix, with a significant focus on horror and music.
-- **Cluster 3** appeals to a mainstream audience with adventure, action, and comedy.
-- **Cluster 4** emphasizes drama, with themes that are more mature and introspective.
+- **Cluster 0**: Family and animation.
+- **Cluster 1**: Action and sci-fi.
+- **Cluster 2**: Niche genres, like horror and music.
+- **Cluster 3**: Popular mainstream genres with action and comedy.
+- **Cluster 4**: Drama, with a mature, serious tone.
 
-These clusters provide a structured view of genre groupings, making it easier to understand audience preferences and content characteristics within the dataset.
+These clusters offer a structured view of genre preferences, aiding in understanding audience tastes within the dataset.
 
 ## Decade-Based Clustering
 
-This analysis categorizes movies by their release decade, providing insights into the distribution of films over time. By grouping movies by the decade of their release, we can observe trends in movie production and identify significant periods in the film industry.
+This analysis categorizes movies by their release decade, providing insights into trends in movie production over time.
 
 ### Decade Distribution Table and Visualization
 
 ![alt text](/public/image-22.png)
 
-The table and bar chart above show the number of movies released in each decade. The data reveals a clear trend of growth in movie production over time, with particularly high production rates in the 21st century.
+The table and bar chart above show the number of movies released per decade, highlighting the growth in movie production, especially from the 20th century onward.
 
 | Release Decade | Movie Count |
 | -------------- | ----------- |
@@ -101,203 +92,171 @@ The table and bar chart above show the number of movies released in each decade.
 ### Analysis of Decade Clustering
 
 1. **Early Decades (1870–1920)**:
-
-   - **Observations**: The film industry had limited output in its earliest decades, with fewer than 1000 movies produced before 1920. This period includes the experimental phase of cinema, where filmmaking was still an emerging art form.
-   - **Insights**: The low movie counts reflect the early days of cinema, characterized by technological innovation and experimentation. The increase from the 1910s to the 1920s shows the gradual establishment of the film industry.
+   - **Observations**: Limited output as the industry was in its infancy.
+   - **Insights**: Reflects cinema’s experimental phase and technological beginnings.
 
 2. **Growth Phase (1930–1960)**:
-
-   - **Observations**: Significant growth in movie production occurred from the 1930s to the 1960s, with each decade producing over 2000 films. This period marks the Golden Age of Hollywood, where movie production flourished, and cinema became a central form of entertainment.
-   - **Insights**: The rise in production during these decades is associated with advancements in film technology, the establishment of major studios, and increased global demand for cinema.
+   - **Observations**: Production flourished during Hollywood’s Golden Age, with each decade producing over 2000 films.
+   - **Insights**: Driven by advancements in film technology and increased audience demand.
 
 3. **Modernization and Expansion (1970–1990)**:
-
-   - **Observations**: Movie production continued to grow steadily, reaching over 4000 films by the 1990s. This period saw diversification in genre, the rise of blockbusters, and the influence of global markets on Hollywood.
-   - **Insights**: The increase in production during these decades reflects a time of innovation, with the emergence of new genres, special effects, and the influence of television and later home video on the movie industry.
+   - **Observations**: Production steadily increased, with the 1990s reaching over 4000 films.
+   - **Insights**: Growth fueled by new genres, special effects, and home video’s influence.
 
 4. **Digital Era (2000–2020)**:
-   - **Observations**: From 2000 onwards, movie production experienced a dramatic increase, with the 2010s producing nearly 14,000 films and the 2020s continuing this trend, albeit slightly lower due to possible external factors like the COVID-19 pandemic.
-   - **Insights**: The surge in production in the 21st century is attributed to advancements in digital filmmaking, the growth of streaming platforms, and the globalization of cinema. The high production count in the 2010s reflects the ease of digital distribution and the rise of independent films.
+   - **Observations**: A dramatic increase in production, with nearly 14,000 films in the 2010s. The slight dip in the 2020s may reflect external factors like the pandemic.
+   - **Insights**: Driven by digital filmmaking, global streaming, and the rise of independent films.
 
 ### Visual Summary
 
-The bar chart titled "Number of Movies Released per Decade" complements the table, providing a clear visual representation of the exponential growth in movie production over time. Key takeaways include:
+The chart titled "Number of Movies Released per Decade" visually emphasizes key takeaways:
 
-- **Steady Growth in the Golden Age**: The increase from the 1930s to the 1960s reflects the establishment of the movie industry as a major entertainment form.
-- **Expansion in Modern Cinema**: The jump in production from the 1970s onward shows diversification and the impact of new technologies and distribution channels.
-- **Digital Boom**: The sharp rise in the 21st century highlights the impact of digital technology, global distribution, and the emergence of online streaming.
+- **Golden Age Growth**: The steady rise from the 1930s to the 1960s established cinema as a central entertainment form.
+- **Expansion in Modern Cinema**: Growth from the 1970s onward reflects technological and distribution advances.
+- **Digital Boom**: The 21st-century surge highlights digital technology’s impact and online streaming’s influence.
 
-This analysis showcases the evolution of movie production, offering insights into how the film industry has adapted to technological and cultural shifts over the decades.
+This analysis shows how movie production has evolved with cultural and technological shifts, marking each decade’s unique contributions to cinema.
 
 ## Score-Based Clustering
 
-This analysis categorizes movies into three clusters based on their average vote score (`vote_average`). By grouping movies according to their score, we can identify clusters that represent low, medium, and high-rated movies.
+This analysis categorizes movies into three clusters based on their average vote score (`vote_average`), identifying groups of low, medium, and high-rated films.
 
 ### Score Cluster Distribution Visualization
 
 ![alt text](/public/image-23.png)
 
-The bar chart above shows the number of movies in each score cluster along with the score range for each cluster.
+The bar chart shows the number of movies in each score cluster, with their corresponding score ranges.
 
 | Cluster | Score Range | Movie Count |
 | ------- | ----------- | ----------- |
-| 0       | 4.8 - 7.5   | 14496       |
-| 1       | 0.5 - 4.8   | 2595        |
-| 2       | 7.5 - 10.0  | 4065        |
+| 0       | 4.8 - 7.5   | 14,496      |
+| 1       | 0.5 - 4.8   | 2,595       |
+| 2       | 7.5 - 10.0  | 4,065       |
 
 ### Analysis of Score Clusters
 
-1. **Cluster 0 (Medium Score Range: 4.8 - 7.5)**:
+1. **Cluster 0 (Medium Score: 4.8 - 7.5)**:
+   - **Observations**: Most movies fall into this category, with moderate scores.
+   - **Insights**: Represents average-rated movies, likely including popular films that appeal to niche or mainstream audiences without critical acclaim.
 
-   - **Observations**: Cluster 0 contains the majority of movies, with a total of 14,496 movies that fall within a mid-range score.
-   - **Insights**: This cluster likely represents average-rated movies, suggesting that most films in the dataset receive moderate scores from viewers. This range includes a mix of popular but not critically acclaimed films and genre films that resonate with niche audiences.
+2. **Cluster 1 (Low Score: 0.5 - 4.8)**:
+   - **Observations**: Contains a smaller set of 2,595 low-rated movies.
+   - **Insights**: Likely includes films that were less successful with audiences, possibly due to limited appeal, lower production quality, or niche content.
 
-2. **Cluster 1 (Low Score Range: 0.5 - 4.8)**:
-
-   - **Observations**: This cluster has 2,595 movies with low scores, indicating a smaller subset of films that may have been poorly received.
-   - **Insights**: These movies are likely less successful in terms of viewer reception, potentially including experimental, niche, or low-budget films that did not appeal to a broader audience.
-
-3. **Cluster 2 (High Score Range: 7.5 - 10.0)**:
-   - **Observations**: Cluster 2 includes 4,065 movies with high scores, indicating a category of well-received, highly-rated films.
-   - **Insights**: This cluster likely includes critically acclaimed films, popular blockbusters, and audience favorites. These high-scoring movies are typically characterized by quality production, strong storytelling, or significant viewer appeal.
+3. **Cluster 2 (High Score: 7.5 - 10.0)**:
+   - **Observations**: Comprises 4,065 high-rated movies.
+   - **Insights**: Includes critically acclaimed or popular films with high audience ratings, often characterized by quality production or strong storytelling.
 
 ### Summary
 
-The score-based clustering divides movies into three main categories:
+The score clustering reveals three main categories:
 
-- **Average-Rated Films** (Cluster 0) dominate the dataset, suggesting that most films receive moderate ratings.
-- **Low-Rated Films** (Cluster 1) represent a smaller portion of the dataset and may indicate less popular or less successful films.
-- **High-Rated Films** (Cluster 2) include well-received movies with high audience and critical ratings, highlighting popular and critically acclaimed content.
+- **Average-Rated Films** (Cluster 0) make up the majority, showing most films receive moderate ratings.
+- **Low-Rated Films** (Cluster 1) form a smaller group of less popular movies.
+- **High-Rated Films** (Cluster 2) represent highly rated, well-received films.
 
-This clustering provides insights into the general distribution of movie scores within the dataset, helping to identify trends in viewer preferences and the overall reception of movies.
+This clustering helps us understand the general distribution of movie ratings, providing insight into viewer preferences and overall film reception within the dataset.
 
 ## Movie Success
 
-This analysis examines the relationship between a movie's budget and its popularity to assess trends that may indicate financial success or lack thereof. By plotting budget against popularity on a logarithmic scale, we aim to identify patterns that reveal how budget influences popularity.
+This analysis explores how a movie's budget relates to its popularity, assessing trends that may indicate financial success. By plotting budget against popularity on a log scale, we aim to uncover patterns showing how budget levels impact popularity.
 
 ### Budget vs. Popularity Scatter Plot (Limited Range)
 
 ![alt text](/public/image-24.png)
 
-In the scatter plot above, budget and popularity are displayed on a log scale to enhance clarity and observe patterns in a more manageable range. The data is limited to movies within the 75th percentile for budget and the 90th percentile for popularity, excluding extreme values that could skew the visualization.
+The scatter plot displays `budget` and `popularity` on a logarithmic scale, focusing on movies within the 75th percentile for budget and the 90th percentile for popularity. This range excludes extreme values to provide a clearer view of general trends.
 
 ### Analysis
 
 1. **General Pattern**:
-
-   - **Observations**: The plot shows a clustering of movies with low budgets and low popularity on the left side of the graph, while higher budgets tend to align with a wider range of popularity values.
-   - **Insights**: A larger budget does not guarantee high popularity, but it allows for a higher potential range in popularity. Movies with smaller budgets typically have limited reach, likely due to lower production and marketing capabilities.
+   - **Observations**: Low-budget movies cluster around low popularity levels, while higher budgets align with a broader range of popularity.
+   - **Insights**: A large budget doesn’t guarantee popularity but does allow for a wider reach. Low-budget films tend to have limited popularity, possibly due to constraints in production and marketing.
 
 2. **High-Budget Movies**:
-
-   - **Observations**: Towards the right side of the plot (higher budgets), there is a noticeable spread in popularity, ranging from low to high. This suggests that while a high budget can lead to high popularity, it does not necessarily guarantee it.
-   - **Insights**: High-budget films have the resources to potentially achieve greater popularity, but success is not assured. This spread may reflect variations in marketing effectiveness, quality of production, and audience reception.
+   - **Observations**: High-budget movies (right side) show a wide spread in popularity, from low to high.
+   - **Insights**: High budgets offer the potential for popularity, though success varies significantly. This spread could reflect differences in audience appeal, marketing, and film quality.
 
 3. **Low- to Mid-Budget Movies**:
-
-   - **Observations**: Most low- and mid-budget movies (left side of the plot) cluster at lower popularity levels. This is particularly evident for movies with budgets under the 75th percentile, where popularity rarely reaches the higher end.
-   - **Insights**: Low-budget films generally achieve lower popularity, possibly due to limited distribution and promotional efforts. These films might succeed in niche markets but lack the broad appeal of high-budget movies.
+   - **Observations**: Low- and mid-budget films mostly cluster at low popularity levels.
+   - **Insights**: Limited budgets often lead to limited popularity, likely due to smaller promotional efforts. While successful in niche markets, these films generally lack the broad reach of high-budget films.
 
 4. **Log Scale Benefits**:
-   - Using a log scale helps to visualize variations across wide-ranging budgets and popularity scores, revealing patterns that might be obscured in a linear scale.
+   - The log scale helps visualize differences in popularity across a wide budget range, revealing patterns that a linear scale might obscure.
 
 ### Summary
 
-The analysis reveals that:
+This analysis suggests that:
 
-- **Higher budgets provide an opportunity** for greater popularity, but success varies widely within this group.
-- **Lower-budget movies generally achieve limited popularity**, which may be due to restricted production and promotional resources.
-- **Logarithmic scaling** aids in visualizing relationships within large value ranges, offering a clearer view of how budget and popularity interact across different budget levels.
+- **Higher budgets offer the potential for greater popularity**, though success is not assured.
+- **Low-budget movies tend to have limited popularity**, which may be due to constraints in production and marketing resources.
+- **Logarithmic scaling** clarifies the budget-popularity relationship, showing how larger budgets can broaden potential reach without guaranteeing high popularity.
 
-This relationship can help inform decisions on budgeting strategies for films, with the understanding that while a larger budget increases potential reach, it does not ensure popularity or success.
+These insights could guide budget strategies, highlighting that while a larger budget can expand reach, it doesn’t necessarily ensure popularity or financial success.
 
 ## Missing Data Imputation
 
-This code implements various techniques to fill missing data across multiple columns. Here’s a detailed breakdown of each step, covering different methods like mean, median, and regression for handling missing values.
+This code applies different techniques to fill missing values in various columns, such as mean, median, and regression, ensuring the dataset is consistent and suitable for analysis.
 
 ### Steps for Filling Missing Data
 
 1. **Column Check for Genre**:
-
-   - The code checks if the `genres` column exists. If not, it defaults to `genre`. This is essential for handling datasets with slightly different column names.
+   - Checks if `genres` exists, defaulting to `genre` if not. This ensures compatibility across datasets with slight column name variations.
 
 2. **Dropping Essential Missing Rows**:
+   - **Operation**: Removes rows missing `title`, `original_title`, or `release_date`.
+   - **Rationale**: These fields are essential identifiers, so records without them are excluded to maintain data integrity.
 
-   - **Operation**: Rows missing critical information like `title`, `original_title`, and `release_date` are dropped.
-   - **Rationale**: These columns are fundamental identifiers and crucial for analysis, so rows without these values are not useful.
-
-3. **Filling Non-Essential Fields with Default Values**:
-
-   - Columns like `homepage`, `backdrop_path`, `poster_path`, `imdb_id`, `overview`, and `tagline` are filled with placeholder text or default values.
+3. **Filling Non-Essential Fields with Placeholders**:
    - **Details**:
      - `homepage`, `backdrop_path`, `poster_path` → "Not Available"
      - `imdb_id` → "Unknown"
      - `overview` → "No Description"
      - `tagline` → "No Tagline"
-   - **Purpose**: These fields are often supplementary information. Filling them with placeholders prevents them from being null, ensuring consistency in the dataset.
+   - **Purpose**: Adds placeholder text to ensure consistency without affecting critical data analysis.
 
 4. **Filling Categorical Fields with 'Unknown'**:
+   - Categorical fields like `production_countries`, `production_companies`, and `spoken_languages` are assigned `"Unknown"` or `"Not Specified"`.
+   - **Purpose**: Prevents null values in categorical data, simplifying further analysis.
 
-   - Fields like `production_countries`, `production_companies`, and `spoken_languages` are filled with `"Unknown"` or `"Not Specified"`.
-   - **Purpose**: Categorical fields with missing values are assigned a neutral value to avoid issues in analysis and prevent null values.
+5. **Imputing `vote_average` Using Regression**:
+   - **Method**: Uses a `RandomForestRegressor` to predict missing `vote_average` values based on `revenue`, `runtime`, `popularity`, and `vote_count`.
+   - **Rationale**: Provides an informed prediction using related features, enhancing data accuracy for this critical metric.
 
-5. **Step 1: Imputing `vote_average` Using Regression**:
-
-   - **Method**: RandomForestRegressor model to predict missing values in `vote_average`.
-   - **Predictors**: `revenue`, `runtime`, `popularity`, `vote_count`.
+6. **Conditional Medians for `budget` and `revenue` by Genre and Runtime**:
+   - **Approach**: Calculates conditional medians for `budget` and `revenue` by genre and runtime bins.
    - **Process**:
-     - The dataset is split into rows with available `vote_average` values for training, and rows with missing values for prediction.
-     - The model is trained on existing values and used to fill missing values based on predictors.
-   - **Rationale**: Regression provides a data-driven approach to predict missing values using correlated features.
-
-6. **Step 2: Conditional Medians for `budget` Based on Genre and Runtime**:
-
-   - **Approach**: Conditional medians by genre and runtime binning are calculated for the `budget` column, filling missing values with the median for each genre-runtime combination.
-   - **Process**:
-     - `budget_medians` is a grouped median of `budget` values for each genre and runtime bin.
-     - The dataset is iterated over, filling `budget` values where they are zero and runtime falls within a specific bin.
-   - **Remaining `budget` Values**: Any remaining zero `budget` values are filled with the overall median of `budget`.
-   - **Purpose**: Median values are robust against outliers and provide genre- and runtime-specific imputation, creating a more contextually accurate estimate.
-
-7. **Step 3: Conditional Medians for `revenue` Based on Genre and Runtime**:
-   - **Approach**: Similar to `budget`, conditional medians by genre and runtime are calculated for `revenue`, filling missing values based on these categories.
-   - **Process**:
-     - `revenue_medians` stores genre-runtime grouped medians for `revenue`.
-     - The dataset is iterated over, filling missing `revenue` values according to the genre-runtime binning.
-   - **Remaining `revenue` Values**: Any remaining zero values in `revenue` are filled with the overall median of `revenue`.
-   - **Purpose**: This approach provides a contextual imputation for `revenue`, aligning with genre and runtime to generate more accurate estimates.
+     - Median values for each genre-runtime pair fill zero `budget` and `revenue` entries.
+     - Any remaining zeros are replaced with the overall median.
+   - **Purpose**: Context-specific imputation using genre and runtime ensures more accurate values, preserving data integrity.
 
 ### Summary
 
-This imputation strategy provides a multi-faceted approach to handle missing data:
+This imputation approach ensures a consistent and reliable dataset through:
 
-- **Placeholders for Non-Essential Fields**: Ensures consistency by filling in placeholders where values are supplementary but not critical for analysis.
-- **Regression for Continuous Variables (`vote_average`)**: Uses regression to predict missing values based on related features, providing a sophisticated estimate for missing ratings.
-- **Conditional Medians by Genre and Runtime**: Applies conditional medians for `budget` and `revenue`, providing genre- and runtime-specific estimates that are more reflective of each film category.
+- **Placeholders** for non-essential fields to maintain uniformity.
+- **Regression-based estimates** for `vote_average`, adding data-driven precision.
+- **Genre-runtime conditional medians** for `budget` and `revenue`, filling gaps contextually and improving data quality.
 
-This process effectively cleans the dataset, enabling more reliable analysis by filling missing values with informed estimates and maintaining the integrity of essential data.
+This strategy makes the dataset cleaner and more complete, supporting dependable analysis by using both placeholders and informed estimates for missing data.
 
 ## Data Normalization
 
-This task involves normalizing the numerical features `vote_average`, `runtime`, and `popularity` to ensure they are on a consistent scale, which is essential for various analyses, especially for models sensitive to feature scaling.
+This task involves normalizing the numerical features `vote_average`, `runtime`, and `popularity` to place them on a consistent scale, which is essential for analyses and models sensitive to feature scaling.
 
 ### Normalization Process
 
 1. **Selection of Features**:
-
-   - The columns chosen for normalization are `vote_average`, `runtime`, and `popularity`.
-   - These features were selected because they are continuous numerical values that benefit from being scaled to a uniform range.
+   - The chosen columns for normalization are `vote_average`, `runtime`, and `popularity`, as these continuous values benefit from being scaled to a uniform range.
 
 2. **Min-Max Scaling**:
-
    - **Scaler Used**: MinMaxScaler from `sklearn.preprocessing`.
-   - **Purpose**: MinMaxScaler transforms the data by scaling each feature to a specified range, typically [0, 1]. This is achieved by rescaling the values of each feature individually so that they fit within the 0-1 range.
+   - **Purpose**: MinMaxScaler transforms each feature to a specified range, typically [0, 1]. This is done by rescaling values of each feature individually within this range.
    - **Process**:
-     - The scaler is fit and applied to the selected columns in the DataFrame.
-     - The normalized values replace the original values in the DataFrame, maintaining consistency.
+     - The scaler is applied to the selected columns, replacing original values with normalized ones, ensuring consistency across the DataFrame.
 
 3. **Resulting Data**:
-   - The table below displays the normalized values for `vote_average`, `runtime`, and `popularity`, with all values now ranging between 0 and 1.
+   - The table below displays the normalized values for `vote_average`, `runtime`, and `popularity`, each now ranging from 0 to 1.
 
 | Index | vote_average | runtime  | popularity |
 | ----- | ------------ | -------- | ---------- |
@@ -311,55 +270,35 @@ This task involves normalizing the numerical features `vote_average`, `runtime`,
 | 51943 | 0.587833     | 0.003226 | 0.000595   |
 | 51944 | 0.642756     | 0.002688 | 0.000595   |
 
-### Analysis
-
-- **Benefits of Normalization**:
-
-  - Normalizing `vote_average`, `runtime`, and `popularity` allows for easier comparison and analysis, especially in machine learning models or statistical analyses where feature scaling impacts performance.
-  - Features on a 0-1 scale are more suitable for distance-based algorithms (e.g., K-means clustering) and prevent any single feature from disproportionately influencing the results.
-
-- **Observations**:
-  - The normalized values retain the relative distribution of the original data but are now scaled within the 0-1 range.
-  - Features with a wide range or skewed distribution (like `popularity`) are now easier to interpret and analyze on a comparable scale with other features.
-
 ### Summary
 
-This normalization process prepares the dataset for further analysis, enhancing compatibility across various analytical methods by ensuring consistent feature scaling. Normalized data is crucial for robust and accurate analysis in subsequent tasks.
+Normalization prepares the dataset for analysis by ensuring consistent feature scaling, which is critical for robust and accurate results in subsequent tasks.
 
 ## Outliers Removal
 
-This code aims to identify and remove outliers from the dataset to reduce skewed data points that could impact the accuracy and reliability of analyses.
+This code identifies and removes outliers from the dataset to improve data reliability by reducing skewed data points that could impact analysis.
 
 ### Steps for Outlier Detection and Removal
 
 1. **Initial Row Count**:
-
-   - **Initial Count**: The dataset initially contains 49,807 rows before any outlier removal.
+   - **Count**: The dataset starts with 49,807 rows.
 
 2. **Outlier Detection Using IQR**:
-
-   - **Method**: The Interquartile Range (IQR) method is used to identify outliers.
-     - **IQR Calculation**: For each column, Q1 (25th percentile) and Q3 (75th percentile) are calculated. The IQR is the difference between Q3 and Q1.
-     - **Outlier Bounds**: Data points are considered outliers if they fall below `Q1 - 1.5 * IQR` or above `Q3 + 1.5 * IQR`.
-   - **Columns Excluded**: Certain columns (`budget`, `revenue`, `vote_count`, and `popularity`) are excluded from outlier removal to preserve natural variation in these financial and count-based columns.
+   - **Method**: Uses the Interquartile Range (IQR) method.
+     - **IQR Calculation**: Calculates Q1 (25th percentile) and Q3 (75th percentile) for each column to define the IQR.
+     - **Outlier Bounds**: Outliers are values outside `Q1 - 1.5 * IQR` or `Q3 + 1.5 * IQR`.
+   - **Excluded Columns**: `budget`, `revenue`, `vote_count`, and `popularity` are excluded to keep the natural variability in these fields.
 
 3. **Outlier Removal**:
-
-   - For each numeric column (excluding the specified columns), values outside the defined bounds are labeled as "Outlier."
-   - Rows containing these outlier values are removed from the dataset.
-   - **Outlier Counts Per Column**:
-     - `id`: 0 outliers removed (no extreme values in this column).
+   - Outliers identified in numeric columns (excluding those specified) are removed.
+   - **Outliers Removed**:
      - `vote_average`: 3,603 outliers removed.
      - `runtime`: 8,155 outliers removed.
+   - **Total Rows Removed**: 11,758 rows, reducing the dataset to 38,049 rows.
 
-4. **Final Row Count**:
-
-   - **After Removal**: The dataset now contains 38,049 rows after removing outliers.
-   - This indicates that 11,758 rows were removed in total due to extreme outliers.
-
-5. **Verification of Remaining Outliers**:
-   - After the initial removal, the code checks if any outliers remain, potentially due to natural variation.
-   - **Result**: No additional outliers were found, confirming that extreme values have been successfully removed.
+4. **Final Verification**:
+   - Checks for any remaining outliers after initial removal to confirm data integrity.
+   - **Result**: No further outliers, confirming successful removal.
 
 ### Summary of Outlier Removal
 
@@ -371,76 +310,72 @@ This code aims to identify and remove outliers from the dataset to reduce skewed
 
 ### Benefits of Outlier Removal
 
-- **Improved Data Quality**: Removing extreme outliers enhances the dataset’s integrity, ensuring that analyses are not overly influenced by skewed values.
-- **Robustness in Analysis**: By filtering out unusually high or low values, the dataset becomes more suitable for models that are sensitive to outliers, such as linear regression and clustering.
+- **Enhanced Data Quality**: By removing extreme values, analyses become less prone to distortion from skewed data.
+- **Robust Analysis**: Filtering outliers ensures a more stable dataset for models sensitive to extreme values, such as regression and clustering.
 
-This outlier removal process has reduced the data's variance, making it more reliable for future analyses.
+This outlier removal process refines the dataset, making it more accurate for future analyses.
 
 ## Creation of New Features
 
-This task involved generating new features by combining and transforming existing columns to enrich the dataset with additional insights.
+This task involved generating additional features by transforming and combining existing columns to provide deeper insights into the dataset.
 
 ### New Features Created
 
 1. **Revenue-to-Budget Ratio (`revenue_to_budget_ratio`)**:
-
-   - **Definition**: The ratio of revenue to budget, indicating the profitability of a movie.
-   - **Purpose**: This feature allows us to analyze how profitable each movie was relative to its production budget. A higher ratio indicates a more profitable film.
+   - **Definition**: The ratio of revenue to budget, indicating a movie's profitability.
+   - **Purpose**: A higher ratio shows higher profitability relative to the movie's budget.
 
 2. **Release Decade (`release_decade`)**:
-
-   - **Definition**: The decade in which the movie was released, derived from the release date.
-   - **Purpose**: Grouping movies by decade enables us to observe trends and patterns in the film industry over time, making it easier to analyze changes in popularity, profitability, and other metrics by era.
+   - **Definition**: The decade a movie was released, derived from its release date.
+   - **Purpose**: Helps in analyzing trends in the film industry by decade.
 
 3. **Popularity-to-Vote Ratio (`popularity_to_vote_ratio`)**:
-
-   - **Definition**: The ratio of popularity to the number of votes, indicating the relative popularity of a movie.
-   - **Purpose**: This metric provides insight into how popular a movie was relative to its vote count, which can highlight movies that are well-regarded despite having fewer votes.
+   - **Definition**: The ratio of popularity to the number of votes.
+   - **Purpose**: Highlights movies that have high popularity relative to their vote count, useful for identifying culturally impactful movies with fewer votes.
 
 4. **Log Transformation of Budget (`log_budget`)**:
-
-   - **Definition**: The natural logarithm of the budget, used to reduce skewness in budget data.
-   - **Purpose**: Log transformation is applied to mitigate the impact of extreme values in budget data, making it easier to compare movies with vastly different budgets on a normalized scale.
+   - **Definition**: The natural logarithm of the budget.
+   - **Purpose**: Normalizes the data by reducing the impact of extreme values, making it easier to compare movies with widely different budgets.
 
 5. **Log Transformation of Revenue (`log_revenue`)**:
-   - **Definition**: The natural logarithm of the revenue, used to reduce skewness in revenue data.
-   - **Purpose**: Similar to `log_budget`, this transformation allows for better analysis by normalizing revenue values, especially when dealing with highly variable revenue figures.
+   - **Definition**: The natural logarithm of revenue.
+   - **Purpose**: Similar to `log_budget`, this transformation makes revenue comparisons more meaningful by reducing skewness.
 
 ### Preview of the New Features
 
 | Title                                      | Release Date | Revenue       | Budget     | Revenue-to-Budget Ratio | Release Decade | Popularity-to-Vote Ratio | Log Budget | Log Revenue |
 | ------------------------------------------ | ------------ | ------------- | ---------- | ----------------------- | -------------- | ------------------------ | ---------- | ----------- |
-| Frozen Fever                               | 2015-03-09   | 144,327,371   | 50,000,000 | 2.8865                  | 2010           | 1.1440e-05               | 17.7275    | 18.7876     |
-| Paperman                                   | 2012-11-02   | 30,695.5      | 8,000      | 3.8369                  | 2010           | 9.7609e-06               | 8.9873     | 10.3319     |
-| Piper                                      | 2016-06-16   | 4,078,230     | 3,300,000  | 1.2358                  | 2010           | 6.2752e-06               | 15.0094    | 15.2212     |
-| Superman/Shazam!: The Return of Black Adam | 2010-11-16   | 5,155,325     | 1,600,100  | 3.2219                  | 2010           | 1.4903e-05               | 14.2856    | 15.4555     |
-| Olaf's Frozen Adventure                    | 2017-10-27   | 516,455,007.5 | 85,000,000 | 6.0759                  | 2010           | 1.2364e-05               | 18.2582    | 20.0625     |
+| Frozen Fever                               | 2015-03-09   | 144,327,371   | 50,000,000 | 2.89                    | 2010           | 1.14e-05                 | 17.73      | 18.79       |
+| Paperman                                   | 2012-11-02   | 30,695.5      | 8,000      | 3.84                    | 2010           | 9.76e-06                 | 8.99       | 10.33       |
+| Piper                                      | 2016-06-16   | 4,078,230     | 3,300,000  | 1.24                    | 2010           | 6.28e-06                 | 15.01      | 15.22       |
+| Superman/Shazam!: The Return of Black Adam | 2010-11-16   | 5,155,325     | 1,600,100  | 3.22                    | 2010           | 1.49e-05                 | 14.29      | 15.46       |
+| Olaf's Frozen Adventure                    | 2017-10-27   | 516,455,007.5 | 85,000,000 | 6.08                    | 2010           | 1.24e-05                 | 18.26      | 20.06       |
 
 ### Descriptions of New Columns
 
-- **`revenue_to_budget_ratio`**: Indicates the profitability of a movie by calculating the revenue generated per dollar of budget.
-- **`release_decade`**: Groups movies into decades based on their release year for easier trend analysis over time.
-- **`popularity_to_vote_ratio`**: Highlights movies with a high popularity relative to their number of votes, showcasing their cultural impact or niche popularity.
-- **`log_budget`**: Logarithmic transformation of the budget, which normalizes budget data for improved analytical consistency.
-- **`log_revenue`**: Logarithmic transformation of the revenue, allowing for normalized revenue analysis.
+- **`revenue_to_budget_ratio`**: Indicates the profitability of a movie based on how much revenue it generated per dollar of budget.
+- **`release_decade`**: Groups movies by decade, simplifying analysis of trends over time.
+- **`popularity_to_vote_ratio`**: Shows movies with high popularity relative to votes, emphasizing their cultural impact.
+- **`log_budget`**: Log transformation of budget for normalized budget comparisons.
+- **`log_revenue`**: Log transformation of revenue, normalizing it for consistent analysis.
 
-These features enhance the dataset by adding layers of context to each movie, enabling more detailed analyses on profitability, popularity, and historical trends.
+These new features add valuable layers of analysis, providing insights into profitability, popularity, and historical trends across the dataset.
 
 ## Data Conversion
 
-This task involves converting textual data into numerical form to facilitate quantitative analysis.
+This task involves transforming the `release_date` column into a simpler, numeric format to facilitate time-based analysis.
 
 ### Conversion of `release_date` to `release_year`
 
 1. **Conversion Process**:
 
-   - The `release_date` column, initially in datetime format, was transformed to extract the release year as a new numerical column named `release_year`.
-   - **Purpose**: Converting the release date into a numeric year format allows for easier analysis and grouping by year, which can help with time-based analyses, such as trends over time.
+   - The `release_date` column, initially in datetime format, was converted to a numeric `release_year` column by extracting only the year.
+   - **Purpose**: Converting the release date to a single year simplifies year-based analyses, making it easier to examine trends over time.
 
 2. **Result**:
 
-   - The DataFrame now includes a `release_year` column derived from the `release_date`.
-   - Below is a preview of the new column:
+   - A new column, `release_year`, is now part of the DataFrame, providing a clearer and more manageable view of release timelines.
+   - **Preview**:
 
    | release_date | release_year |
    | ------------ | ------------ |
@@ -451,48 +386,48 @@ This task involves converting textual data into numerical form to facilitate qua
    | 2017-10-27   | 2017         |
 
 3. **Benefits of Conversion**:
-   - **Numerical Analysis**: The `release_year` column is now ready for quantitative analysis, enabling tasks such as calculating trends, groupings, and decade-based insights.
-   - **Flexibility**: This conversion provides a simplified view of the release timeline, making it easier to aggregate data by year or decade.
+   - **Simplified Analysis**: The `release_year` column makes it easy to perform time-based grouping and analysis.
+   - **Enhanced Temporal Insights**: The new format allows for easier trend analysis and decade-based groupings.
 
-This approach enhances the dataset’s usability for temporal analysis by transforming complex datetime information into a straightforward numeric format.
+This conversion optimizes the dataset for time-related insights by transforming complex date data into a simple, numeric format.
 
 ## Categorical Data Conversion
 
 ### Distribution of Vote Average Categories
 
-In the vote average distribution, the majority of films fall into the "Medium" and "High" categories, with fewer films rated as "Very Low" or "Low." This pattern suggests that the general audience feedback is moderately positive, and only a small subset of films receive notably low ratings. High ratings may be concentrated in well-received genres, sequels, or films with extensive marketing reach, which tend to attract favorable votes.
+The distribution of vote averages shows that most films fall into the "Medium" and "High" categories, with fewer films rated as "Very Low" or "Low." This pattern indicates generally positive audience feedback, with only a small subset of films receiving low ratings. Higher ratings may often be associated with well-received genres, sequels, or films backed by strong marketing, which tend to attract more favorable votes.
 
 ![alt text](/public/image-35.png)
 
 ### Distribution of Budget Categories
 
-The budget distribution indicates that most films are classified in the "Low Budget" category, with significantly fewer films in the "Medium," "High," or "Very High" budget categories. This skew towards lower budgets suggests that the industry is predominantly composed of lower-cost productions, likely due to the high financial risk associated with larger budgets. The "Very High Budget" films are rare and often associated with major studios and franchises aiming for large-scale returns.
+The budget distribution is heavily skewed towards the "Low Budget" category, with fewer films classified as "Medium," "High," or "Very High" budget. This suggests that most productions are low-cost, likely due to the high financial risk associated with larger budgets. Only a few films fall under the "Very High Budget" category, typically associated with major studios and franchises aiming for wide-scale releases.
 
 ![alt text](/public/image-8.png)
 
 ### Distribution of Revenue Categories
 
-The revenue distribution shows that most films generate "Low Revenue," with a notable segment under "No Revenue," which may indicate either a lack of reported earnings or financial underperformance. Only a small percentage of films achieve "High" or "Very High Revenue," generally associated with popular or blockbuster releases. This disparity highlights the competitive nature of the film industry, where only select films achieve significant box office success.
+The revenue distribution reveals that most films generate "Low Revenue," with a notable number listed under "No Revenue," potentially indicating either missing earnings data or financial underperformance. Only a small percentage achieve "High" or "Very High Revenue," generally linked to popular or blockbuster releases, underscoring the competitive nature of the industry where only select films achieve substantial box office success.
 
 ![alt text](/public/image-13.png)
 
 ---
 
-This categorical analysis highlights the industry's budget and revenue dynamics, where most films operate on limited budgets and generate modest earnings, while only a few high-budget productions achieve substantial revenue and high audience ratings.
+This analysis underscores the industry's budget and revenue dynamics: most films operate on limited budgets and generate modest earnings, while only a select few high-budget productions reach significant revenue and attract high audience ratings.
 
 ## Text Preprocessing
 
-In the "overview" column, we applied several preprocessing steps to enhance the text data for analysis. This included:
+To enhance the text data in the "overview" column for analysis, we applied the following preprocessing steps:
 
-1. **Removing Special Characters and Numbers:** Cleansed text by eliminating any non-alphabetic characters.
-2. **Lowercasing:** Converted all text to lowercase to standardize the words.
-3. **Stopword Removal:** Removed common stopwords to focus on meaningful words in each overview.
-4. **Lemmatizing and Stemming:** Reduced words to their root forms, capturing essential meanings while minimizing variations.
+1. **Removing Special Characters and Numbers**: Cleansed the text by eliminating non-alphabetic characters.
+2. **Lowercasing**: Converted all text to lowercase for standardization.
+3. **Stopword Removal**: Removed common stopwords, keeping only meaningful words.
+4. **Lemmatizing and Stemming**: Reduced words to their root forms, focusing on essential meanings and minimizing variations.
 
 ### Comparison: Original vs. Processed Overview
 
-The table below displays a comparison of the original overviews with their processed counterparts after applying the preprocessing steps. The processed text is more concise, containing key terms that encapsulate the essence of each movie description without unnecessary words.
+Below is a table comparing the original overviews with their processed versions after applying these steps. The processed text is now more concise, containing only key terms that capture each movie’s main themes without unnecessary words.
 
 ![alt text](/public/image-40.png)
 
-The processed overview text is now optimized for tasks such as text analysis, clustering, and sentiment analysis, making it easier to analyze patterns and themes across movies.
+The processed overview text is now better suited for tasks like text analysis, clustering, and sentiment analysis, enabling a clearer understanding of patterns and themes across movies.
