@@ -24,7 +24,7 @@ const BASE = "/DM-Docs/src";
 
 export default defineConfig({
   extends: baseConfig,
-  srcDir: "src",
+  // srcDir: "src",
   lang: "en-US",
 
   base: BASE,
