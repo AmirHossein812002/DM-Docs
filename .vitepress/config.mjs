@@ -34,9 +34,9 @@ export default defineConfig({
 
   themeConfig: {
     sidebar: {
-      "/part-1": SIDE_BAR_CONFIG,
-      "/part-2": SIDE_BAR_CONFIG,
-      "/part-3": SIDE_BAR_CONFIG,
+      "src/part-1": SIDE_BAR_CONFIG,
+      "src/part-2": SIDE_BAR_CONFIG,
+      "src/part-3": SIDE_BAR_CONFIG,
     },
   },
 
