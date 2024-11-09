@@ -1,3 +1,5 @@
+# Part 1 Analysis
+
 ## Genre-Based Clustering
 
 This analysis groups movies into clusters based on genre characteristics using KMeans clustering. Each cluster represents movies with similar themes, allowing insights into common genre patterns.

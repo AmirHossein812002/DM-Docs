@@ -6,7 +6,7 @@
     </h1>
     <p class="description"> Analysis for animation_movies data set </p>
     <p class="actions">
-      <a class="get-started" href="part-1">
+      <a class="get-started" href="phase-1/part-1">
         Go To Analysis
         <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
           <path

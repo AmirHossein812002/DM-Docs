@@ -3,19 +3,28 @@ import baseConfig from "@vue/theme/config";
 
 const SIDE_BAR_CONFIG = [
   {
-    text: "Analysis",
+    text: "Phase 1 Analysis",
     items: [
       {
         text: "Part 1",
-        link: "/part-1",
+        link: "/phase-1/part-1",
       },
       {
         text: "Part 2",
-        link: "/part-2",
+        link: "/phase-1/part-2",
       },
       {
         text: "Part 3",
-        link: "/part-3",
+        link: "/phase-1/part-3",
+      },
+    ],
+  },
+  {
+    text: "Phase 2 Analysis",
+    items: [
+      {
+        text: "Part 1",
+        link: "/phase-2/part-1",
       },
     ],
   },
@@ -34,9 +43,8 @@ export default defineConfig({
 
   themeConfig: {
     sidebar: {
-      "/part-1": SIDE_BAR_CONFIG,
-      "/part-2": SIDE_BAR_CONFIG,
-      "/part-3": SIDE_BAR_CONFIG,
+      "/phase-1": SIDE_BAR_CONFIG,
+      "/phase-2": SIDE_BAR_CONFIG,
     },
   },
 
