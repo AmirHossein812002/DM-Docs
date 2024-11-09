@@ -6,16 +6,16 @@ const SIDE_BAR_CONFIG = [
     text: "Analysis",
     items: [
       {
-        text: "phase 1",
-        link: "/phase-1",
+        text: "Part 1",
+        link: "/part-1",
       },
       {
-        text: "phase 2",
-        link: "/phase-2",
+        text: "Part 2",
+        link: "/part-2",
       },
       {
-        text: "phase 3",
-        link: "/phase-3",
+        text: "Part 3",
+        link: "/part-3",
       },
     ],
   },
@@ -34,9 +34,9 @@ export default defineConfig({
 
   themeConfig: {
     sidebar: {
-      "/phase-1": SIDE_BAR_CONFIG,
-      "/phase-2": SIDE_BAR_CONFIG,
-      "/phase-3": SIDE_BAR_CONFIG,
+      "/part-1": SIDE_BAR_CONFIG,
+      "/part-2": SIDE_BAR_CONFIG,
+      "/part-3": SIDE_BAR_CONFIG,
     },
   },
 
