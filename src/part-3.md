@@ -1,4 +1,4 @@
-# Phase 3 Analysis
+# Part 3 Analysis
 
 ## Missing Data Imputation
 
