@@ -20,7 +20,7 @@ const SIDE_BAR_CONFIG = [
     ],
   },
 ];
-const BASE = "/DM-Docs/";
+const BASE = "/DM-Docs/src";
 
 export default defineConfig({
   extends: baseConfig,
