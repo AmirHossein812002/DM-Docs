@@ -7,15 +7,15 @@ const SIDE_BAR_CONFIG = [
     items: [
       {
         text: "Part 1",
-        link: "/part-1",
+        link: "src/part-1",
       },
       {
         text: "Part 2",
-        link: "/part-2",
+        link: "src/part-2",
       },
       {
         text: "Part 3",
-        link: "/part-3",
+        link: "src/part-3",
       },
     ],
   },
