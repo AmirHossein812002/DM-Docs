@@ -1,195 +1,672 @@
-# Part 1 Analysis
+## Meaningful Features Clustering Analysis
 
-## Genre-Based Clustering
+### Feature Selection
 
-This analysis groups movies into clusters based on genre characteristics using KMeans clustering. Each cluster represents movies with similar themes, allowing insights into common genre patterns.
+To cluster movies meaningfully, the following features were selected:
 
-### Clustered Genre Distributions Table
+#### Numerical Features:
 
-| Cluster | Action | Adventure | Animation | Comedy | Crime | Documentary | Drama | Family | Fantasy | History | Horror | Music | Mystery | Romance | Science Fiction | Thriller | Tv Movie | War | Western |
-| ------- | ------ | --------- | --------- | ------ | ----- | ----------- | ----- | ------ | ------- | ------- | ------ | ----- | ------- | ------- | --------------- | -------- | -------- | --- | ------- |
-| 0       | 84     | 1389      | 3607.0    | 1074.0 | 22    | 9           | 284   | 7214   | 1107    | 56      | 59     | 323   | 105     | 103     | 274             | 7        | 316      | 21  | 33      |
-| 1       | 783    | 361       | 1096.5    | 200.5  | 37    | 5           | 254   | 62     | 244     | 11      | 137    | 59    | 53      | 87      | 2193            | 70       | 46       | 69  | 6       |
-| 2       | 27     | 5         | 3150.5    | 611.0  | 128   | 0           | 1994  | 1      | 1661    | 294     | 1087   | 1227  | 288     | 588     | 0               | 169      | 186      | 224 | 108     |
-| 3       | 1530   | 1778      | 1338.5    | 381.0  | 124   | 5           | 250   | 144    | 870     | 52      | 97     | 40    | 89      | 82      | 60              | 56       | 117      | 27  | 11      |
-| 4       | 4      | 6         | 939.0     | 30.0   | 9     | 0           | 1878  | 67     | 58      | 14      | 86     | 13    | 8       | 6       | 13              | 4        | 14       | 27  | 3       |
+- **Popularity**: A measure of how well-known a movie is.
+- **Vote Average**: The average rating a movie has received.
+- **ROI (Revenue-to-Budget Ratio)**: Indicates financial success relative to the movie's budget.
 
-### Genre Distribution Visualization
+#### Categorical Features:
 
-![alt text](/public/image-21.png)
+- **Genres**: Transformed into binary columns using one-hot encoding to represent each genre as a separate feature.
 
-The bar chart represents genre distribution across clusters, highlighting dominant genres within each group.
+---
 
-### Cluster Analysis
+### KMeans Clustering
 
-1. **Cluster 0**:
-   - **Focus**: Family and animation, with high counts in `Family` and `Animation`.
-   - **Summary**: Likely contains family-friendly and animated films, appealing to a broad audience.
+#### Objective
 
-2. **Cluster 1**:
-   - **Focus**: Action, sci-fi, and adventure.
-   - **Summary**: Likely includes superhero films, sci-fi adventures, and action thrillers for fans of dynamic movies.
+To group movies into distinct clusters using the KMeans algorithm and determine the optimal number of clusters based on the Silhouette Score.
 
-3. **Cluster 2**:
-   - **Focus**: Horror, music, and unique animated content.
-   - **Summary**: Likely consists of niche genres, including horror and musicals, catering to specific tastes.
+#### Results
 
-4. **Cluster 3**:
-   - **Focus**: Adventure, action, and comedy.
-   - **Summary**: Mainstream movies with a mix of action and humor, likely popular blockbusters.
+- **Best Silhouette Score:** `0.7686`
+- **Optimal Number of Clusters:** `3`
 
-5. **Cluster 4**:
-   - **Focus**: Drama and history.
-   - **Summary**: Likely includes serious dramas and historical films, appealing to mature audiences.
+#### Cluster Sizes
 
-### Recommendations
+The number of movies in each cluster is as follows:
 
-- **Content Categorization**: Use clusters for better genre-based recommendations, e.g., Cluster 0 for family films, Cluster 1 for action/sci-fi.
-- **Targeted Marketing**: Market Cluster 1 and 3 to action/adventure audiences, and Cluster 4 to drama/history viewers.
-- **Further Refinement**: Consider adding movie runtime, popularity, and ratings to enhance clustering insights.
+| Cluster       | Number of Movies |
+| ------------- | ---------------- |
+| **Cluster 0** | 19,881           |
+| **Cluster 2** | 704              |
+| **Cluster 1** | 20               |
+
+![alt text](image.png)
+
+#### Cluster Averages
+
+The average values of the selected numerical features for each cluster:
+
+| KMeans_Cluster | Popularity | Vote_Average | ROI      |
+| -------------- | ---------- | ------------ | -------- |
+| **Cluster 0**  | 0.600609   | 6.290750     | 3.910983 |
+| **Cluster 1**  | 0.608000   | 6.273238     | 9.643287 |
+| **Cluster 2**  | 0.698432   | 6.306051     | 3.909453 |
+
+![alt text](image-1.png)
+
+#### Visualization
+
+Clusters were visualized using **Principal Component Analysis (PCA)**:
+
+![alt text](image-2.png)
+
+#### Analysis
+
+- **Cluster 0:** Represents the majority of movies, with moderate popularity and ROI.
+- **Cluster 1:** A small cluster of movies with exceptionally high ROI, likely blockbusters or niche hits.
+- **Cluster 2:** Movies with higher popularity but average ROI, potentially representing widely viewed but moderately successful films.
+- PCA visualization shows clear separation between clusters, especially Cluster 1, which stands out due to its unique characteristics.
+
+---
+
+### DBSCAN Clustering
+
+#### Objective
+
+To group movies into clusters using the DBSCAN algorithm and determine optimal parameters (`eps` and `min_samples`) through tuning.
+
+#### Results
+
+- **Best Silhouette Score:** Achieved during tuning with sampled data.
+- **Optimal Parameters:**
+  - `eps = 0.3`
+  - `min_samples = 9`
+
+#### Cluster Sizes
+
+The number of movies in each cluster (excluding noise) is as follows:
+
+| Cluster       | Number of Movies |
+| ------------- | ---------------- |
+| **Cluster 0** | 14,991           |
+| **Cluster 3** | 3,077            |
+| **Cluster 2** | 200              |
+| **Cluster 1** | 112              |
+| **Cluster 6** | 63               |
+| **Cluster 5** | 37               |
+| **Cluster 4** | 30               |
+
+![alt text](image-3.png)
+
+#### Cluster Averages
+
+The average values of the selected numerical features for each cluster:
+
+| DBSCAN_Cluster | Popularity | Vote_Average | ROI      |
+| -------------- | ---------- | ------------ | -------- |
+| **Cluster 0**  | 0.600002   | 6.139569     | 3.911143 |
+| **Cluster 1**  | 0.600009   | 5.266340     | 3.911143 |
+| **Cluster 2**  | 0.600015   | 7.283500     | 3.911143 |
+| **Cluster 3**  | 0.600002   | 6.976442     | 3.911143 |
+| **Cluster 4**  | 0.600000   | 5.408832     | 3.911143 |
+| **Cluster 5**  | 0.621027   | 6.000000     | 3.911143 |
+| **Cluster 6**  | 0.600000   | 7.500700     | 3.911143 |
+
+![alt text](image-4.png)
+
+#### Visualization
+
+Clusters were visualized using **Principal Component Analysis (PCA)** for dimensionality reduction:
+
+![alt text](image-5.png)
+
+#### Analysis
+
+- **Cluster 0:** Contains the majority of movies with average `vote_average` and `ROI`.
+- **Cluster 3:** The second-largest cluster, representing movies with higher average `vote_average`.
+- **Cluster 2:** A smaller cluster with the highest average `vote_average`.
+- **Cluster 6:** A very small cluster with distinctively high `vote_average`.
+- **Noise Points:** DBSCAN inherently identifies noise points (not included in the clusters) that don’t fit well with others in the dataset.
+- PCA visualization shows distinct clusters, though some clusters (e.g., 0 and 3) have overlapping characteristics in certain features.
+
+---
+
+### Conclusion
+
+#### Summary
+
+The clustering analysis using both **KMeans** and **DBSCAN** provided meaningful insights into the movie dataset:
+
+- **KMeans Clustering:**
+
+  - Grouped movies into 3 clusters, with clear separation in PCA visualization.
+  - Identified a small cluster (Cluster 1) of movies with exceptionally high ROI, likely representing blockbuster hits or niche successes.
+  - Majority of movies were in Cluster 0, representing general characteristics with moderate popularity and ROI.
+
+- **DBSCAN Clustering:**
+  - Identified 7 clusters (excluding noise), with varying sizes.
+  - Captured smaller clusters like Cluster 2 (highest `vote_average`) and Cluster 6 (distinctively high `vote_average`).
+  - Highlighted noise points in the data, showcasing DBSCAN's ability to handle outliers.
+
+#### Observations
+
+- **Feature Contributions:** Both clustering methods demonstrated that `vote_average` and `ROI` played significant roles in forming distinct groups.
+- **Algorithm Strengths:**
+  - KMeans is effective for balanced clustering but struggles with irregular shapes or noise.
+  - DBSCAN is better at identifying smaller, irregular clusters and outliers.
+
+---
+
+## Year and Season-Based Clustering Analysis
+
+### KMeans Clustering
+
+#### Objective
+
+To cluster movies based on their release year and season using the KMeans algorithm. The goal is to identify patterns in movie releases over time and across seasons.
+
+#### Results
+
+- **Best Silhouette Score:** `0.5673`
+- **Optimal Number of Clusters:** `7`
+
+#### Cluster Sizes
+
+The number of movies in each cluster is as follows:
+
+| Cluster       | Number of Movies |
+| ------------- | ---------------- |
+| **Cluster 0** | 19,881           |
+| **Cluster 2** | 704              |
+| **Cluster 1** | 20               |
+
+![alt text](image-6.png)
+
+#### Visualization
+
+Clusters were visualized using **Principal Component Analysis (PCA)**:
+
+![alt text](image-8.png)
+
+#### Analysis
+
+- **Cluster 0:** Represents the majority of movies with a balanced distribution across seasons and years.
+- **Cluster 1:** A small cluster, likely consisting of movies released in specific seasons or years with unique patterns.
+- **Cluster 2:** Smaller but distinct in release patterns, likely influenced by specific seasonal or yearly trends.
+- PCA visualization highlights the separation between the clusters, though some overlap is observed.
+
+---
+
+### DBSCAN Clustering
+
+#### Objective
+
+To cluster movies based on their release year and season using the DBSCAN algorithm, which can handle noise and irregular cluster shapes effectively.
+
+#### Results
+
+- **Cluster Sizes:**
+
+| Cluster       | Number of Movies |
+| ------------- | ---------------- |
+| **Cluster 3** | 8,393            |
+| **Cluster 0** | 3,889            |
+| **Cluster 1** | 3,666            |
+| **Cluster 2** | 3,650            |
+
+![alt text](image-9.png)
+
+#### Visualization
+
+Clusters were visualized using **Principal Component Analysis (PCA)**:
+
+![alt text](image-10.png)
+
+#### Analysis
+
+- **Cluster 3:** The largest cluster, representing movies with common release patterns across multiple years and seasons.
+- **Clusters 0, 1, and 2:** Similar in size, potentially capturing movies with more distinct seasonal or yearly release trends.
+- **Noise Handling:** DBSCAN inherently identifies outliers (if present), though this result did not explicitly list noise points.
+- PCA visualization shows clear separation between clusters, indicating meaningful groupings based on the release features.
+
+---
 
 ### Summary
 
-The table and chart illustrate the distinct focus of each cluster:
+Both KMeans and DBSCAN clustering provide unique insights into movie release patterns:
 
-- **Cluster 0**: Family and animation.
-- **Cluster 1**: Action and sci-fi.
-- **Cluster 2**: Niche genres, like horror and music.
-- **Cluster 3**: Popular mainstream genres with action and comedy.
-- **Cluster 4**: Drama, with a mature, serious tone.
+- **KMeans:** Suitable for balanced clustering and offers a clear structure.
+- **DBSCAN:** Captures irregular cluster shapes and handles potential noise effectively.
 
-These clusters offer a structured view of genre preferences, aiding in understanding audience tastes within the dataset.
+---
 
-## Decade-Based Clustering
+## Visualization
 
-This analysis categorizes movies by their release decade, providing insights into trends in movie production over time.
+### KMeans Additional Analysis
 
-### Decade Distribution Table and Visualization
+#### Genre Distribution
 
-![alt text](/public/image-22.png)
+The percentage of movies across genres for each KMeans cluster:
 
-The table and bar chart above show the number of movies released per decade, highlighting the growth in movie production, especially from the 20th century onward.
+![alt text](image-11.png)
 
-| Release Decade | Movie Count |
-| -------------- | ----------- |
-| 1870           | 25          |
-| 1880           | 1           |
-| 1890           | 9           |
-| 1900           | 45          |
-| 1910           | 269         |
-| 1920           | 965         |
-| 1930           | 2153        |
-| 1940           | 1871        |
-| 1950           | 1909        |
-| 1960           | 2185        |
-| 1970           | 2658        |
-| 1980           | 3595        |
-| 1990           | 4224        |
-| 2000           | 6803        |
-| 2010           | 13760       |
-| 2020           | 9336        |
+**Observations:**
 
-### Analysis of Decade Clustering
+- Cluster 0 has a significant percentage of `Animation` and `Comedy` movies.
+- Cluster 2 shows higher percentages in `Drama`, `Comedy`, and `Adventure`.
 
-1. **Early Decades (1870–1920)**:
-   - **Observations**: Limited output as the industry was in its infancy.
-   - **Insights**: Reflects cinema’s experimental phase and technological beginnings.
+---
 
-2. **Growth Phase (1930–1960)**:
-   - **Observations**: Production flourished during Hollywood’s Golden Age, with each decade producing over 2000 films.
-   - **Insights**: Driven by advancements in film technology and increased audience demand.
+#### Seasonal Distribution
 
-3. **Modernization and Expansion (1970–1990)**:
-   - **Observations**: Production steadily increased, with the 1990s reaching over 4000 films.
-   - **Insights**: Growth fueled by new genres, special effects, and home video’s influence.
+The percentage of movies released in each season for KMeans clusters:
 
-4. **Digital Era (2000–2020)**:
-   - **Observations**: A dramatic increase in production, with nearly 14,000 films in the 2010s. The slight dip in the 2020s may reflect external factors like the pandemic.
-   - **Insights**: Driven by digital filmmaking, global streaming, and the rise of independent films.
+![alt text](image-12.png)
 
-### Visual Summary
+**Observations:**
 
-The chart titled "Number of Movies Released per Decade" visually emphasizes key takeaways:
+- Cluster 0 has the highest percentage of movies released in the **Winter** season.
+- Cluster 1 shows dominance in **Fall**, followed by **Spring**.
 
-- **Golden Age Growth**: The steady rise from the 1930s to the 1960s established cinema as a central entertainment form.
-- **Expansion in Modern Cinema**: Growth from the 1970s onward reflects technological and distribution advances.
-- **Digital Boom**: The 21st-century surge highlights digital technology’s impact and online streaming’s influence.
+---
 
-This analysis shows how movie production has evolved with cultural and technological shifts, marking each decade’s unique contributions to cinema.
+#### Release Year Trends
 
-## Score-Based Clustering
+The trend of movie releases over years grouped by KMeans clusters:
 
-This analysis categorizes movies into three clusters based on their average vote score (`vote_average`), identifying groups of low, medium, and high-rated films.
+![alt text](image-13.png)
 
-### Score Cluster Distribution Visualization
+**Observations:**
 
-![alt text](/public/image-23.png)
+- Cluster 0 exhibits a steady increase in releases, peaking in the 2010s.
+- Clusters 1 and 2 show smaller release volumes with slight peaks in the late 1990s.
 
-The bar chart shows the number of movies in each score cluster, with their corresponding score ranges.
+---
 
-| Cluster | Score Range | Movie Count |
-| ------- | ----------- | ----------- |
-| 0       | 4.8 - 7.5   | 14,496      |
-| 1       | 0.5 - 4.8   | 2,595       |
-| 2       | 7.5 - 10.0  | 4,065       |
+#### Cluster Summary
 
-### Analysis of Score Clusters
+A summary of the top genres, dominant seasons, and average release year for each KMeans cluster:
 
-1. **Cluster 0 (Medium Score: 4.8 - 7.5)**:
-   - **Observations**: Most movies fall into this category, with moderate scores.
-   - **Insights**: Represents average-rated movies, likely including popular films that appeal to niche or mainstream audiences without critical acclaim.
+| KMeans Cluster | Top Genres                 | Dominant Season | Average Release Year |
+| -------------- | -------------------------- | --------------- | -------------------- |
+| **0**          | Animation, Comedy, Drama   | Winter          | 1995.0               |
+| **1**          | Animation, Comedy, Fantasy | Fall            | 1998.8               |
+| **2**          | Animation, Comedy, Drama   | Winter          | 1986.0               |
 
-2. **Cluster 1 (Low Score: 0.5 - 4.8)**:
-   - **Observations**: Contains a smaller set of 2,595 low-rated movies.
-   - **Insights**: Likely includes films that were less successful with audiences, possibly due to limited appeal, lower production quality, or niche content.
+---
 
-3. **Cluster 2 (High Score: 7.5 - 10.0)**:
-   - **Observations**: Comprises 4,065 high-rated movies.
-   - **Insights**: Includes critically acclaimed or popular films with high audience ratings, often characterized by quality production or strong storytelling.
+### DBSCAN Additional Analysis
 
-### Summary
+#### Genre Distribution
 
-The score clustering reveals three main categories:
+The percentage of movies across genres for each DBSCAN cluster:
 
-- **Average-Rated Films** (Cluster 0) make up the majority, showing most films receive moderate ratings.
-- **Low-Rated Films** (Cluster 1) form a smaller group of less popular movies.
-- **High-Rated Films** (Cluster 2) represent highly rated, well-received films.
+![alt text](image-14.png)
 
-This clustering helps us understand the general distribution of movie ratings, providing insight into viewer preferences and overall film reception within the dataset.
+**Observations:**
 
-## Movie Success
+- All clusters show a dominant percentage in the `Animation` genre.
+- Cluster 0 shows some representation of `Western` and `Crime` genres.
 
-This analysis explores how a movie's budget relates to its popularity, assessing trends that may indicate financial success. By plotting budget against popularity on a log scale, we aim to uncover patterns showing how budget levels impact popularity.
+---
 
-### Budget vs. Popularity Scatter Plot (Limited Range)
+#### Seasonal Distribution
 
-![alt text](/public/image-24.png)
+The percentage of movies released in each season for DBSCAN clusters:
 
-The scatter plot displays `budget` and `popularity` on a logarithmic scale, focusing on movies within the 75th percentile for budget and the 90th percentile for popularity. This range excludes extreme values to provide a clearer view of general trends.
+![alt text](image-15.png)
 
-### Analysis
+**Observations:**
 
-1. **General Pattern**:
-   - **Observations**: Low-budget movies cluster around low popularity levels, while higher budgets align with a broader range of popularity.
-   - **Insights**: A large budget doesn’t guarantee popularity but does allow for a wider reach. Low-budget films tend to have limited popularity, possibly due to constraints in production and marketing.
+- Cluster 5 shows the highest percentage of movies released in **Winter** (62%).
+- Clusters 0 and 6 also show strong dominance in **Winter** releases.
 
-2. **High-Budget Movies**:
-   - **Observations**: High-budget movies (right side) show a wide spread in popularity, from low to high.
-   - **Insights**: High budgets offer the potential for popularity, though success varies significantly. This spread could reflect differences in audience appeal, marketing, and film quality.
+---
 
-3. **Low- to Mid-Budget Movies**:
-   - **Observations**: Low- and mid-budget films mostly cluster at low popularity levels.
-   - **Insights**: Limited budgets often lead to limited popularity, likely due to smaller promotional efforts. While successful in niche markets, these films generally lack the broad reach of high-budget films.
+#### Release Year Trends
 
-4. **Log Scale Benefits**:
-   - The log scale helps visualize differences in popularity across a wide budget range, revealing patterns that a linear scale might obscure.
+The trend of movie releases over years grouped by DBSCAN clusters:
 
-### Summary
+![alt text](image-16.png)
 
-This analysis suggests that:
+**Observations:**
 
-- **Higher budgets offer the potential for greater popularity**, though success is not assured.
-- **Low-budget movies tend to have limited popularity**, which may be due to constraints in production and marketing resources.
-- **Logarithmic scaling** clarifies the budget-popularity relationship, showing how larger budgets can broaden potential reach without guaranteeing high popularity.
+- Cluster 0 shows a consistent rise in releases, peaking in the 2010s.
+- Other clusters display smaller release volumes with scattered trends.
 
-These insights could guide budget strategies, highlighting that while a larger budget can expand reach, it doesn’t necessarily ensure popularity or financial success.
+---
+
+#### Cluster Summary
+
+A summary of the top genres, dominant seasons, and average release year for each DBSCAN cluster:
+
+| DBSCAN Cluster | Top Genres                | Dominant Season | Average Release Year |
+| -------------- | ------------------------- | --------------- | -------------------- |
+| **0**          | Animation, Western, Crime | Winter          | 1995.6               |
+| **1**          | Animation, Mystery, Drama | Winter          | 1980.3               |
+| **2**          | Animation, Crime, Mystery | Winter          | 1999.3               |
+| **3**          | Animation, Mystery, Drama | Winter          | 1989.8               |
+| **4**          | Animation, Mystery, Drama | Winter          | 1981.9               |
+| **5**          | Animation, Mystery, Drama | Winter          | 1980.0               |
+| **6**          | Animation, Mystery, Drama | Winter          | 1995.4               |
+
+## Classification Analysis (Phase 1)
+
+### Feature Selection
+
+To analyze movie success and popularity, the following steps were performed:
+
+- A **combined popularity score** was computed using a weighted average of features:
+  - **Popularity**: Weight = 0.5
+  - **ROI**: Weight = 0.3
+  - **Vote Average**: Weight = 0.2
+- A threshold was set at the **median** of the combined score to classify movies as:
+  - **Popular (`is_popular = 1`)**
+  - **Not Popular (`is_popular = 0`)**
+
+#### Results:
+
+**Original Distribution of `is_popular`**:
+| `is_popular` | Proportion |
+|--------------|------------|
+| 0 (Not Popular) | 50.57% |
+| 1 (Popular) | 49.43% |
+
+**Computed Class Weights**:
+| Class | Weight |
+|-------|--------|
+| 0 | 0.99 |
+| 1 | 1.01 |
+
+---
+
+### Train-Test Split
+
+- The dataset was split into:
+  - **80% Training Set**
+  - **20% Testing Set**
+- The split was stratified to maintain the class proportions.
+
+#### Results:
+
+**Train/Test Set Distribution**:
+| Class | Train Proportion | Test Proportion |
+|-------|------------------|-----------------|
+| 0 | 50.57% | 50.57% |
+| 1 | 49.43% | 49.43% |
+
+**Number of Samples**:
+
+- **Train Set**: 16,484 samples
+- **Test Set**: 4,121 samples
+
+---
+
+### Model Training and Initial Accuracy
+
+Three models were trained:
+
+1. **Decision Tree**
+2. **SVM**
+3. **Naive Bayes**
+
+#### Results:
+
+**Training Accuracies**:
+| Model | Training Accuracy |
+|-------------------|-------------------|
+| **Decision Tree** | 1.00 |
+| **SVM** | 1.00 |
+| **Naive Bayes** | 0.78 |
+
+---
+
+### Hyperparameter Tuning
+
+#### Best Parameters:
+
+| Model             | Best Parameters                                             |
+| ----------------- | ----------------------------------------------------------- |
+| **Decision Tree** | `max_depth=10`, `min_samples_split=2`, `min_samples_leaf=1` |
+| **SVM**           | `C=1`, `gamma=scale`, `kernel=linear`                       |
+| **Naive Bayes**   | `var_smoothing=1e-09`                                       |
+
+---
+
+### Test Set Evaluation
+
+The tuned models were evaluated on the test set.
+
+#### Results:
+
+**Test Accuracies**:
+| Model | Accuracy |
+|-------------------|----------|
+| **Decision Tree** | 1.00 |
+| **SVM** | 1.00 |
+| **Naive Bayes** | 0.79 |
+
+**Classification Reports**:
+
+#### **Decision Tree**:
+
+| Class | Precision | Recall | F1-Score |
+| ----- | --------- | ------ | -------- |
+| **0** | 1.00      | 1.00   | 1.00     |
+| **1** | 1.00      | 1.00   | 1.00     |
+
+#### **SVM**:
+
+| Class | Precision | Recall | F1-Score |
+| ----- | --------- | ------ | -------- |
+| **0** | 0.99      | 1.00   | 1.00     |
+| **1** | 1.00      | 0.99   | 1.00     |
+
+#### **Naive Bayes**:
+
+| Class | Precision | Recall | F1-Score |
+| ----- | --------- | ------ | -------- |
+| **0** | 0.71      | 0.98   | 0.83     |
+| **1** | 0.96      | 0.60   | 0.74     |
+
+---
+
+### Misclassification Analysis
+
+The number of misclassified movies for each model was calculated:
+
+**Misclassified Movies**:
+| Model | Misclassified Movies |
+|-------------------|-----------------------|
+| **Decision Tree** | 2940 |
+| **SVM** | 2935 |
+| **Naive Bayes** | 2934 |
+
+---
+
+### Failed vs. Successful Movies Analysis
+
+#### Feature Distribution Visualizations:
+
+1. **Revenue**:
+   ![alt text](image-20.png)
+
+2. **Budget**:
+   ![alt text](image-19.png)
+
+3. **Popularity**:
+   ![alt text](image-18.png)
+
+4. **ROI**:
+   ![alt text](image-17.png)
+
+---
+
+### Feature Importance:
+
+The **Decision Tree** model identified the following feature importances:
+
+| Feature        | Importance |
+| -------------- | ---------- |
+| **Popularity** | 0.974      |
+| **ROI**        | 0.017      |
+| **Budget**     | 0.008      |
+| **Revenue**    | 0.000      |
+
+- **Popularity** is the dominant feature for determining movie success, followed by **ROI**.
+
+## Classification Analysis (Phase 2)
+
+### Discretization:
+
+- The `vote_average` column was divided into **4 equal-frequency bins**:
+  - **Class 1**: 5.02 to 6.00
+  - **Class 2**: 6.00 to 6.21
+  - **Class 3**: 6.21 to 6.45
+  - **Class 4**: 6.45 to 7.64
+
+### Distribution of Classes:
+
+| Class       | Count |
+| ----------- | ----- |
+| **Class 1** | 5928  |
+| **Class 2** | 4601  |
+| **Class 3** | 5116  |
+| **Class 4** | 4960  |
+
+---
+
+### Feature Selection
+
+The following features were selected for predicting `vote_average_category`:
+
+- **ROI** (Revenue-to-Budget Ratio)
+- **Popularity**
+- **Budget**
+- **Revenue**
+
+#### Target Variable Distribution:
+
+| Class       | Count |
+| ----------- | ----- |
+| **Class 1** | 5928  |
+| **Class 2** | 4601  |
+| **Class 3** | 5116  |
+| **Class 4** | 4960  |
+
+---
+
+### Train-Test Split
+
+The dataset was split into:
+
+- **80% Training Set**
+- **20% Testing Set**
+
+#### Train-Test Distribution:
+
+| Class       | Train Proportion | Test Proportion |
+| ----------- | ---------------- | --------------- |
+| **Class 1** | 28.77%           | 28.78%          |
+| **Class 2** | 22.33%           | 22.32%          |
+| **Class 3** | 24.83%           | 24.82%          |
+| **Class 4** | 24.07%           | 24.07%          |
+
+---
+
+### Model Training and Initial Accuracy
+
+Three models were trained on the training data:
+
+1. **Decision Tree**
+2. **SVM**
+3. **Naive Bayes**
+
+#### Training Accuracies:
+
+| Model             | Training Accuracy |
+| ----------------- | ----------------- |
+| **Decision Tree** | 0.30              |
+| **SVM**           | 0.29              |
+| **Naive Bayes**   | 0.24              |
+
+---
+
+### Hyperparameter Tuning
+
+#### Best Parameters:
+
+| Model             | Best Parameters                                             |
+| ----------------- | ----------------------------------------------------------- |
+| **Decision Tree** | `max_depth=10`, `min_samples_leaf=5`, `min_samples_split=2` |
+| **SVM**           | `C=0.1`, `gamma=scale`                                      |
+| **Naive Bayes**   | `var_smoothing=1e-07`                                       |
+
+---
+
+### Test Set Evaluation
+
+The tuned models were evaluated on the test set for accuracy and classification performance.
+
+#### Test Accuracies:
+
+| Model             | Accuracy |
+| ----------------- | -------- |
+| **Decision Tree** | 0.29     |
+| **SVM**           | 0.29     |
+| **Naive Bayes**   | 0.29     |
+
+#### Classification Reports:
+
+##### Decision Tree:
+
+| Class       | Precision | Recall | F1-Score |
+| ----------- | --------- | ------ | -------- |
+| **Class 1** | 0.282     | 0.943  | 0.434    |
+| **Class 2** | 0.286     | 0.004  | 0.009    |
+| **Class 3** | 0.227     | 0.005  | 0.010    |
+| **Class 4** | 0.435     | 0.054  | 0.097    |
+
+##### SVM:
+
+| Class       | Precision | Recall | F1-Score |
+| ----------- | --------- | ------ | -------- |
+| **Class 1** | 0.288     | 1.000  | 0.447    |
+| **Class 2** | 0.000     | 0.000  | 0.000    |
+| **Class 3** | 0.000     | 0.000  | 0.000    |
+| **Class 4** | 0.000     | 0.000  | 0.000    |
+
+##### Naive Bayes:
+
+| Class       | Precision | Recall | F1-Score |
+| ----------- | --------- | ------ | -------- |
+| **Class 1** | 0.288     | 0.995  | 0.447    |
+| **Class 2** | 0.000     | 0.000  | 0.000    |
+| **Class 3** | 0.200     | 0.001  | 0.002    |
+| **Class 4** | 0.316     | 0.006  | 0.012    |
+
+---
+
+### Misclassification Summary
+
+#### Total Misclassified Movies:
+
+| Model             | Total Misclassified |
+| ----------------- | ------------------- |
+| **Decision Tree** | 2940                |
+| **SVM**           | 2935                |
+| **Naive Bayes**   | 2934                |
+
+---
+
+### Feature Validation
+
+#### Correlation vs. Decision Tree Importance:
+
+| Feature        | Correlation with `vote_average` | Decision Tree Importance |
+| -------------- | ------------------------------- | ------------------------ |
+| **Popularity** | -0.005249                       | 0.974231                 |
+| **ROI**        | -0.000980                       | 0.017402                 |
+| **Budget**     | 0.002067                        | 0.008368                 |
+
+#### Observations:
+
+- **Popularity** dominates as the most important feature for the Decision Tree model.
+- Correlations for other features are weak and show minimal importance in the model.
