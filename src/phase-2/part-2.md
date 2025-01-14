@@ -133,13 +133,13 @@ The number of misclassified movies for each model was calculated:
 #### Feature Distribution Visualizations:
 
 1. **Budget**:
-   ![alt text](/src/public/phase-2/image-19.png)
+   ![alt text](/public/phase-2/image-19.png)
 
 2. **Popularity**:
-   ![alt text](/src/public/phase-2/image-18.png)
+   ![alt text](/public/phase-2/image-18.png)
 
 3. **ROI**:
-   ![alt text](/src/public/phase-2/image-17.png)
+   ![alt text](/public/phase-2/image-17.png)
 
 ---
 

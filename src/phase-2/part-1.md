@@ -39,7 +39,7 @@ The number of movies in each cluster is as follows:
 | **Cluster 2** | 704              |
 | **Cluster 1** | 20               |
 
-![alt text](/src/public/phase-2/image.png)
+![alt text](/public/phase-2/image.png)
 
 #### Cluster Averages
 
@@ -51,13 +51,13 @@ The average values of the selected numerical features for each cluster:
 | **Cluster 1**  | 0.608000   | 6.273238     | 9.643287 |
 | **Cluster 2**  | 0.698432   | 6.306051     | 3.909453 |
 
-![alt text](/src/public/phase-2/image-1.png)
+![alt text](/public/phase-2/image-1.png)
 
 #### Visualization
 
 Clusters were visualized using **Principal Component Analysis (PCA)**:
 
-![alt text](/src/public/phase-2/image-2.png)
+![alt text](/public/phase-2/image-2.png)
 
 #### Analysis
 
@@ -94,7 +94,7 @@ The number of movies in each cluster (excluding noise) is as follows:
 | **Cluster 5** | 37               |
 | **Cluster 4** | 30               |
 
-![alt text](/src/public/phase-2/image-3.png)
+![alt text](/public/phase-2/image-3.png)
 
 #### Cluster Averages
 
@@ -110,13 +110,13 @@ The average values of the selected numerical features for each cluster:
 | **Cluster 5**  | 0.621027   | 6.000000     | 3.911143 |
 | **Cluster 6**  | 0.600000   | 7.500700     | 3.911143 |
 
-![alt text](/src/public/phase-2/image-4.png)
+![alt text](/public/phase-2/image-4.png)
 
 #### Visualization
 
 Clusters were visualized using **Principal Component Analysis (PCA)** for dimensionality reduction:
 
-![alt text](/src/public/phase-2/image-5.png)
+![alt text](/public/phase-2/image-5.png)
 
 #### Analysis
 
@@ -177,13 +177,13 @@ The number of movies in each cluster is as follows:
 | **Cluster 2** | 704              |
 | **Cluster 1** | 20               |
 
-![alt text](/src/public/phase-2/image-6.png)
+![alt text](/public/phase-2/image-6.png)
 
 #### Visualization
 
 Clusters were visualized using **Principal Component Analysis (PCA)**:
 
-![alt text](/src/public/phase-2/image-8.png)
+![alt text](/public/phase-2/image-8.png)
 
 #### Analysis
 
@@ -210,13 +210,13 @@ To cluster movies based on their release year and season using the DBSCAN algori
 | **Cluster 1** | 3,666            |
 | **Cluster 2** | 3,650            |
 
-![alt text](/src/public/phase-2/image-9.png)
+![alt text](/public/phase-2/image-9.png)
 
 #### Visualization
 
 Clusters were visualized using **Principal Component Analysis (PCA)**:
 
-![alt text](/src/public/phase-2/image-10.png)
+![alt text](/public/phase-2/image-10.png)
 
 #### Analysis
 
@@ -242,7 +242,7 @@ Both KMeans and DBSCAN clustering provide unique insights into movie release pat
 
 The percentage of movies across genres for each KMeans cluster:
 
-![alt text](/src/public/phase-2/image-11.png)
+![alt text](/public/phase-2/image-11.png)
 
 **Observations:**
 
@@ -255,7 +255,7 @@ The percentage of movies across genres for each KMeans cluster:
 
 The percentage of movies released in each season for KMeans clusters:
 
-![alt text](/src/public/phase-2/image-12.png)
+![alt text](/public/phase-2/image-12.png)
 
 **Observations:**
 
@@ -268,7 +268,7 @@ The percentage of movies released in each season for KMeans clusters:
 
 The trend of movie releases over years grouped by KMeans clusters:
 
-![alt text](/src/public/phase-2/image-13.png)
+![alt text](/public/phase-2/image-13.png)
 
 **Observations:**
 
@@ -295,7 +295,7 @@ A summary of the top genres, dominant seasons, and average release year for each
 
 The percentage of movies across genres for each DBSCAN cluster:
 
-![alt text](/src/public/phase-2/image-14.png)
+![alt text](/public/phase-2/image-14.png)
 
 **Observations:**
 
@@ -308,7 +308,7 @@ The percentage of movies across genres for each DBSCAN cluster:
 
 The percentage of movies released in each season for DBSCAN clusters:
 
-![alt text](/src/public/phase-2/image-15.png)
+![alt text](/public/phase-2/image-15.png)
 
 **Observations:**
 
@@ -321,7 +321,7 @@ The percentage of movies released in each season for DBSCAN clusters:
 
 The trend of movie releases over years grouped by DBSCAN clusters:
 
-![alt text](/src/public/phase-2/image-16.png)
+![alt text](/public/phase-2/image-16.png)
 
 **Observations:**
 

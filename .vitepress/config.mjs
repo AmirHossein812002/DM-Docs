@@ -26,6 +26,10 @@ const SIDE_BAR_CONFIG = [
         text: "Part 1",
         link: "/phase-2/part-1",
       },
+      {
+        text: "Part 2",
+        link: "/phase-2/part-2",
+      },
     ],
   },
 ];
